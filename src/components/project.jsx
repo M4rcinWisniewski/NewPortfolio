@@ -47,9 +47,14 @@ const Project = props => {
             >
                 <Box sx={{ display: 'flex' , flexDirection:'row', justifyContent:'center', alignItems:'center', gap:' 15vh'}} id='projects'>
                     <Box sx={{ textAlign: 'left' }} id='Box2'>
-                        <h3 style={{ fontSize: '2.5rem' }}>{props.title}</h3>
+                        <h3 style={{ fontSize: '2.5rem' }}>{props.key} {props.title}</h3>
                         <p id='desc'style={{ fontSize: '1.5rem' }}>{props.description}</p>
-                        <a id='socials' href='https://github.com/M4rcinWisniewski/chess/tree/main' style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'inherit', textAlign:'center' }}>
+                        <a id='socials' href='https://github.com/M4rcinWisniewski/chess/tree/main' style={{ 
+                            display: 'flex', 
+                            alignItems: 'center', 
+                            textDecoration: 'none', 
+                            color: 'inherit', 
+                            textAlign:'center' }}>
                             {props.link}
                             <ArrowOutwardIcon />
                         </a>

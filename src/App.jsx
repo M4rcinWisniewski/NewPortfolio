@@ -6,6 +6,7 @@ import { Paper, ThemeProvider, CssBaseline } from "@mui/material"; // Import Css
 import Landing from './components/Landing';
 import data from './data/projects';
 import Project from './components/project';
+import Footer from './components/Footer';
 
 function App() {
   const [theme, setTheme] = useState(true);
@@ -16,7 +17,7 @@ function App() {
   const projects = data.map(item => {
     return(
       <Project  
-        key={item.id}
+        key={item.key}
         title={item.title}
         img={item.img}
         link={item.link}
@@ -32,6 +33,7 @@ function App() {
         <Nav theme={theme} handleTheme={handleTheme} />
         <Landing />
         {projects}
+        <Footer />
       </Paper>
     </ThemeProvider>
   );

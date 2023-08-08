@@ -52,7 +52,11 @@ const Landing = () => {
             <h1 style={styleh}><mark style={{backgroundColor: color, transition: '1s'}}>Hello</mark>, i'm </h1>
             <h1 style={styleh}>Marcin Wiśniewski</h1>
             <p style={stylep}>A freelance front-end developer</p>
-            <Link activeClass="active" to="projects" spy={true} smooth={true} offset={-120} duration={1000}><IconButton ><ArrowDownwardIcon /></IconButton></Link>
+            <Link activeClass="active" to="projects" spy={true} smooth={true} offset={-120} duration={1000}>
+              <IconButton sx={{'&:hover':{transform: 'translate(0px, 5px)', transition:'.5s ease-in-out'}}}>
+                <ArrowDownwardIcon />
+              </IconButton>
+            </Link>
         </Box>
     )
 }
