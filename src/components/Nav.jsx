@@ -5,6 +5,7 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MenuIcon from '@mui/icons-material/Menu';
+import {Link} from 'wouter'
 
 export const themeLight = createTheme({
     palette: {
@@ -71,9 +72,9 @@ export default function Nav({ theme, handleTheme }) {
           
         }}
       >
-        <li id='li1'>MAIN PAGE</li>
-        <li>ABOUT ME</li>
-        <li>CONTACT</li>
+        <Link href='/'><li id='li1'>MAIN PAGE</li></Link>
+        <Link href='/about'><li>ABOUT ME</li></Link>
+        <Link href='/contact'><li>CONTACT</li></Link>
       </ul> 
       }
       {isOpen ? <ul
@@ -96,9 +97,9 @@ export default function Nav({ theme, handleTheme }) {
             zIndex: '999', // Adjust the z-index as needed
           }}
         >
-        <li id='li1'>MAIN PAGE</li>
-        <li>ABOUT ME</li>
-        <li>CONTACT</li>
+          <Link href='/'><li id='li1'>MAIN PAGE</li></Link>
+          <Link href='/about'><li>ABOUT ME</li></Link>
+          <Link href='/contact'><li>CONTACT</li></Link>
       </ul> : null}
       
         <Box

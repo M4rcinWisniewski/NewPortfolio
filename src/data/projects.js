@@ -12,7 +12,7 @@ const data = [
   {
     key: '2',
     title: 'Currency converter',
-    description: 'I had an idea for a project like this for a long time and finally i decided to make it. you can see more on my github.',
+    description: 'I had an idea for a project like this for a long time and finally i decided to make it. You can see more on my github.',
     link: 'Link to github',
     img: image1
   },

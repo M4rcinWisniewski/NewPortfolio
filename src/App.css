@@ -34,3 +34,27 @@ transform: translate(0px, 5px);
   }
 
 }
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 1s forwards;
+}
+
+.fade-in-p {
+  opacity: 0;
+  animation: fadeInAnimation 1.5s forwards;
+  animation-delay: .8s;
+}
+.fade-in-icon {
+  opacity: 0;
+  animation: fadeInAnimation 1.5s forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
