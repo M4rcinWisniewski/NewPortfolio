@@ -6,6 +6,7 @@ import Nav from './components/Nav';
 import Home from './Routes/Home'
 import AboutMe from './Routes/Aboutme';
 import { Route } from 'wouter';
+import Contact from './Routes/Contact';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Nav theme={theme} handleTheme={handleTheme} />
         <Route path='/' component={Home}/>
         <Route path='/about' component={AboutMe}/>
+        <Route path='/contact' component={Contact}/>
       </Paper>
     </ThemeProvider>
   );

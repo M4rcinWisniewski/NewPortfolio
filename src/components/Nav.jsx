@@ -21,7 +21,7 @@ export const themeLight = createTheme({
       mode: 'dark',
       primary: {
         main: '#1e1e1e'
-      }
+      },
     }
   });
 
@@ -59,7 +59,7 @@ export default function Nav({ theme, handleTheme }) {
         padding:'3vw'
       }}
     >
-      {isSmallScreen ? <MenuIcon onClick={handleClick}/>
+      {isSmallScreen ? <MenuIcon onClick={handleClick} style={{cursor: 'pointer'}}/>
       : <ul
       id='ul'
         style={{
