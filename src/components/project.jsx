@@ -54,7 +54,8 @@ const Project = props => {
                             alignItems: 'center', 
                             textDecoration: 'none', 
                             color: 'inherit', 
-                            textAlign:'center' }}>
+                            textAlign:'center',
+                            justifyContent: 'center' }}>
                             {t("link.1")}
                             <ArrowOutwardIcon />
                         </a>
