@@ -1,0 +1,66 @@
+{
+    "Hello": {
+        "1": "Cześć"
+    },
+    "i'm": {
+        "1": "jestem"
+    },
+    "A freelance front-end developer": {
+        "1": "freelance front-end developer"
+    },
+    "MAIN PAGE": {
+        "1": "STRONA GŁÓWNA"
+    },
+    "ABOUT ME": {
+        "1": "O MNIE"
+    },
+    "CONTACT": {
+        "1": "KONTAKT"
+    },
+    "I'm a":{
+        "1": "Jestem"
+    },
+    "programer": {
+        "1": "programistą"
+    },
+    "chess player and boxer": {
+        "1": "szachistą i bokserem"
+    },
+    "paragraph": {
+        "1": "Jestem wszechstronną osobą o różnorodnych zainteresowaniach. Jako amatorski bokser,  zaspokajam swoją potrzebę do fizycznych wyzwań i skupiam moją determinację na doskonaleniu umiejętności w ringu. Poza tym, jestem półprofesjonalnym graczem szachowym co świadczy o moim strategicznym myśleniu i zdolności do przewidywania wielu ruchów naprzód. Łącząc moje umiejętności sportowe i umysł strategiczny maluję się jako wszechstronna osoba, która kwitnie w obliczu wyzwań zarówno w świecie cyfrowym, jak i fizycznym."
+    },
+    "Send me a ": {
+        "1": "Wyślij mi  "
+    },
+    "message!": {
+        "1": "wiadomość!"
+    },
+    "description1": {
+        "1": ""
+    },
+    "link": {
+        "1": "Link do github'a"
+    },
+    "If you want to ask a question or hire me fill the form below!": {
+        "1": "Jeśli chcesz zadać mi pytanie lub zatrudnić mnie, wypełnij poniższy formularz"
+    },
+    "Your name": {
+        "1": "Twoje imię"
+    },
+    "Your email": {
+        "1": "Twój email"
+    },
+    "Your message": {
+        "1": "Twoja wiadomość"
+    },
+    "Send": {
+        "1": "Wyślij"
+    },   
+    "English": {
+        "1": "Angielski"
+    },
+    "Polish": {
+        "1": "Polski"
+    }
+
+} 
