@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Suspense fallback={(
-      <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%'}}>
+      <Box sx={{position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
         <CircularProgress/>
       </Box>)}>
       <App />
