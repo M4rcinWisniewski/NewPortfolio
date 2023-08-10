@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './i18next'
+import { Box, CircularProgress } from '@mui/material';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Suspense fallback={(<div>Loadning...</div>)}>
+    <Suspense fallback={(
+      <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%'}}>
+        <CircularProgress/>
+      </Box>)}>
       <App />
     </Suspense>
   </React.StrictMode>
