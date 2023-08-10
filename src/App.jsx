@@ -7,6 +7,7 @@ import Home from './Routes/Home'
 import AboutMe from './Routes/Aboutme';
 import { Route } from 'wouter';
 import Contact from './Routes/Contact';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path='/' component={Home}/>
         <Route path='/about' component={AboutMe}/>
         <Route path='/contact' component={Contact}/>
+        <Footer />
       </Paper>
     </ThemeProvider>
   );

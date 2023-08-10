@@ -1,11 +1,13 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import {React, useState, useEffect} from 'react';
-import { Box, createTheme} from '@mui/material';
+import { Box, createTheme, Select, MenuItem} from '@mui/material';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MenuIcon from '@mui/icons-material/Menu';
 import {Link} from 'wouter'
+import { useTranslation } from 'react-i18next';
+// import WorkIcon from '@mui/icons-material/WorkOutline';
 
 export const themeLight = createTheme({
     palette: {
@@ -27,8 +29,18 @@ export const themeLight = createTheme({
 
 
 export default function Nav({ theme, handleTheme }) {
+  // const options = ['en', 'pl'];
     const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1000);
     const [isOpen, setIsOpen] = useState(false)
+    const [isValue, setValue] = useState(localStorage.getItem('selectedLanguage') || 'en');
+    
+    const handleChange = (event) => {
+      const selectedValue = event.target.value;
+      setValue(selectedValue);
+      handleLangChange(selectedValue)
+      localStorage.setItem('selectedLanguage', selectedValue)
+    };
+    
     const handleClick = () => {
       setIsOpen(!isOpen)
     }
@@ -45,6 +57,10 @@ export default function Nav({ theme, handleTheme }) {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+  const {t, i18n} = useTranslation();
+  const handleLangChange = lang => {
+    i18n.changeLanguage(lang)
+  }
   return (
     <Box
       sx={{
@@ -72,9 +88,9 @@ export default function Nav({ theme, handleTheme }) {
           
         }}
       >
-        <Link href='/'><li id='li1'>MAIN PAGE</li></Link>
-        <Link href='/about'><li>ABOUT ME</li></Link>
-        <Link href='/contact'><li>CONTACT</li></Link>
+        <Link href='/'><li id='li1'>{t('MAIN PAGE.1')}</li></Link>
+        <Link href='/about'><li>{t('ABOUT ME.1')}</li></Link>
+        <Link href='/contact'><li>{t('CONTACT.1')}</li></Link>
       </ul> 
       }
       {isOpen ? <ul
@@ -97,9 +113,9 @@ export default function Nav({ theme, handleTheme }) {
             zIndex: '999', // Adjust the z-index as needed
           }}
         >
-          <Link href='/'><li id='li1'>MAIN PAGE</li></Link>
-          <Link href='/about'><li>ABOUT ME</li></Link>
-          <Link href='/contact'><li>CONTACT</li></Link>
+        <Link href='/'><li id='li1'>{t('MAIN PAGE.1')}</li></Link>
+        <Link href='/about'><li>{t('ABOUT ME.1')}</li></Link>
+        <Link href='/contact'><li>{t('CONTACT.1')}</li></Link>
       </ul> : null}
       
         <Box
@@ -109,6 +125,20 @@ export default function Nav({ theme, handleTheme }) {
           alignItems: 'center',
           gap:'2vw'
         }}>
+        <div id='socials'><Select
+         labelId="demo-simple-select-label"
+      
+      value={isValue}
+      onChange={handleChange}
+      label='en'
+      variant='standard'
+      sx={{padding: '0 10px 0 10px'}}
+      
+    >
+
+        <MenuItem value='en' >{t("English.1")}</MenuItem>
+        <MenuItem value='pl' >{t("Polish.1")}</MenuItem>
+    </Select></div>
         <a href='https://github.com/M4rcinWisniewski' style={{color: 'inherit'}} ><GitHubIcon id='socials'/></a>
         <a href='https://www.linkedin.com/in/marcin-wi%C5%9Bniewski12/' style={{color: 'inherit'}} ><LinkedInIcon id='socials' /></a>
         <p style={{color: 'inherit'}} onClick={handleTheme} id='socials' sx={{color: 'black', }}>

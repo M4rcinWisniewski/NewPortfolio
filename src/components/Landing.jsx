@@ -2,6 +2,7 @@ import { Box, IconButton } from "@mui/material";
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import React, { useEffect,  useState } from 'react';
 import { Link } from 'react-scroll';
+import { useTranslation } from 'react-i18next';
 import '../App.css'; // Import your animation CSS
 
 export const getRandomColor = () => {
@@ -39,7 +40,7 @@ const stylep = {
     }, 3000);
     return () => clearInterval(intervalId);
   }, []);
-
+  const {t} = useTranslation()
   return (
     <Box sx={{
       display: 'flex',
@@ -52,10 +53,10 @@ const stylep = {
       
   }}>
       <h1 className={`fade-in`} style={styleh}>
-        <mark style={{ backgroundColor: color, transition: '1s' }}>Hello</mark>, i'm
+        <mark style={{ backgroundColor: color, transition: '1s' }}>{t('Hello.1')}</mark>, {t("i'm.1")}
       </h1>
       <h1 className={`fade-in`} style={styleh}>Marcin Wiśniewski</h1>
-      <p className={`fade-in-p`} style={stylep}>A freelance front-end developer</p>
+      <p className={`fade-in-p`} style={stylep}>{t('A freelance front-end developer.1')}</p>
       <Link activeClass="active" to="projects" spy={true} smooth={true} offset={-120} duration={1000}>
         <IconButton className={`fade-in-icon`} sx={{ '&:hover': { transform: 'translate(0px, 15px)', transition: '.5s ease-in-out' } }}>
           <ArrowDownwardIcon />

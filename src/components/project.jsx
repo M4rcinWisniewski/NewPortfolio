@@ -1,6 +1,7 @@
 import { Box, Modal, Backdrop, } from "@mui/material";
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import { useState, useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 import '../App.css'
 
 const getRandomColor = () => {
@@ -29,7 +30,7 @@ const Project = props => {
         }, 3000);
           return () => clearInterval(intervalId);
         }, []);
-
+        const {t} = useTranslation()
     return (
         <>
             <section
@@ -48,14 +49,13 @@ const Project = props => {
                 <Box sx={{ display: 'flex' , flexDirection:'row', justifyContent:'center', alignItems:'center', gap:' 15vh'}} id='projects'>
                     <Box sx={{ textAlign: 'left' }} id='Box2'>
                         <h3 style={{ fontSize: '2.5rem' }}>{props.key} {props.title}</h3>
-                        <p id='desc'style={{ fontSize: '1.5rem' }}>{props.description}</p>
                         <a id='socials' href='https://github.com/M4rcinWisniewski/chess/tree/main' style={{ 
                             display: 'flex', 
                             alignItems: 'center', 
                             textDecoration: 'none', 
                             color: 'inherit', 
                             textAlign:'center' }}>
-                            {props.link}
+                            {t("link.1")}
                             <ArrowOutwardIcon />
                         </a>
                     </Box>

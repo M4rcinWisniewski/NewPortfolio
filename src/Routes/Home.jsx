@@ -1,4 +1,4 @@
-import Footer from '../components/Footer';
+
 import Landing from '../components/Landing';
 import Project from '../components/project';
 import data from '../data/projects';
@@ -19,7 +19,7 @@ const Home = () => {
     <home>
         <Landing />
         {projects}
-        <Footer />
+        
     </home>)
 }
 
