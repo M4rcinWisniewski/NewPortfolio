@@ -5,9 +5,13 @@ import { Paper, ThemeProvider, CssBaseline } from "@mui/material"; // Import Css
 import Nav from './components/Nav';
 import Home from './Routes/Home'
 import AboutMe from './Routes/Aboutme';
-import { Route } from 'wouter';
+import { Route, Switch } from 'wouter';
 import Contact from './Routes/Contact';
 import Footer from './components/Footer';
+import PageNotFound from './components/PageNotFound';
+
+
+const NotFound = () => <div><PageNotFound /></div>;
 
 
 function App() {
@@ -23,9 +27,12 @@ function App() {
       <CssBaseline /> {/* Add CssBaseline to reset default styles */}
       <Paper sx={{ width: '100%', height:'auto', borderRadius: '0' }} className="App"> {/* Remove explicit height */}
         <Nav theme={theme} handleTheme={handleTheme} />
-        <Route path='/' component={Home}/>
-        <Route path='/about' component={AboutMe}/>
-        <Route path='/contact' component={Contact}/>
+        <Switch>
+          <Route path='/' component={Home}/>
+          <Route path='/about' component={AboutMe}/>
+          <Route path='/contact' component={Contact}/>
+          <Route component={NotFound} />
+        </Switch>
         <Footer />
       </Paper>
     </ThemeProvider>
