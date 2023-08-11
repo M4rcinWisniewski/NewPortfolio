@@ -32,6 +32,7 @@ function App() {
           <Route path='/about' component={AboutMe}/>
           <Route path='/contact' component={Contact}/>
           <Route path='/404' component={NotFound} />
+          <Route component={NotFound} />
         </Switch>
         <Footer />
       </Paper>
