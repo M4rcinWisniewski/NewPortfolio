@@ -21,13 +21,15 @@
         "1": "I'm a"
     },
     "programer": {
-        "1": "programer"
+        "1": "programer",
+        "2": "PROGRAMING"
     },
     "chess player and boxer": {
         "1": "chess player and boxer"
     },
     "paragraph": {
-        "1": "I am a versatile individual with a passion for diverse pursuits. As an amateur boxer, i'm embrace the physical challenges of the sport and channel my determination into honing my skills within the ring. Beyond these endeavors, my semi-professional status as a chess player speaks to my strategic thinking and ability to foresee multiple moves ahead. The combination of my athletic pursuits, and strategic mindset paints a picture of a well-rounded individual who thrives on challenges in both the digital and physical realms"
+        "1": "I am a versatile individual with a passion for diverse pursuits. As an amateur boxer, i'm embrace the physical challenges of the sport and channel my determination into honing my skills within the ring. Beyond these endeavors, my semi-professional status as a chess player speaks to my strategic thinking and ability to foresee multiple moves ahead. The combination of my athletic pursuits, and strategic mindset paints a picture of a well-rounded individual who thrives on challenges in both the digital and physical realms",
+        "2": "For the past few years i was learning several font-end development skills. Thru this time i learned HTML, CSS, JavaScript, React and Material UI."
     },
     "Send me a ": {
         "1": "Send me a "

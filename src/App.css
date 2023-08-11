@@ -32,6 +32,12 @@ transform: translate(0px, 5px);
   .hamburger-menu {
     display: block;
   }
+  #img-small{
+    display: none;
+  }
+  #h1 {
+    margin-top: 25vh;
+  }
 
 }
 .fade-in {

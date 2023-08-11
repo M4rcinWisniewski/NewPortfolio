@@ -7,6 +7,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MenuIcon from '@mui/icons-material/Menu';
 import {Link} from 'wouter'
 import { useTranslation } from 'react-i18next';
+import {Link as LinkS} from 'react-scroll'
 // import WorkIcon from '@mui/icons-material/WorkOutline';
 
 export const themeLight = createTheme({
@@ -72,7 +73,8 @@ export default function Nav({ theme, handleTheme }) {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        padding:'3vw'
+        padding:'3vw',
+        
       }}
     >
       {isSmallScreen ? <MenuIcon onClick={handleClick} style={{cursor: 'pointer'}}/>
@@ -86,11 +88,12 @@ export default function Nav({ theme, handleTheme }) {
           fontWeight: '500',
           justifyContent: 'flex-start', // Align the list items to the left
           
+          
         }}
       >
-        <Link href='/'><li id='li1'>{t('MAIN PAGE.1')}</li></Link>
-        <Link href='/about'><li>{t('ABOUT ME.1')}</li></Link>
-        <Link href='/contact'><li>{t('CONTACT.1')}</li></Link>
+        <LinkS activeClass="active" to="name" spy={true} smooth={true} offset={-300} duration={1000}><Link href='/'><li id='li1'>{t('MAIN PAGE.1')}</li></Link></LinkS>
+        <LinkS activeClass="active" to="h1" spy={true} smooth={true} offset={-300} duration={1000}><Link href='/about'><li>{t('ABOUT ME.1')}</li></Link></LinkS>
+        <LinkS activeClass="active" to="form" spy={true} smooth={true} offset={-300} duration={1000}><Link href='/contact'><li>{t('CONTACT.1')}</li></Link></LinkS>
       </ul> 
       }
       {isOpen ? <ul
@@ -113,9 +116,9 @@ export default function Nav({ theme, handleTheme }) {
             zIndex: '999', // Adjust the z-index as needed
           }}
         >
-        <Link href='/'><li id='li1'>{t('MAIN PAGE.1')}</li></Link>
-        <Link href='/about'><li>{t('ABOUT ME.1')}</li></Link>
-        <Link href='/contact'><li>{t('CONTACT.1')}</li></Link>
+        <LinkS activeClass="active" to="name" spy={true} smooth={true} offset={-300} duration={1000}><Link href='/'><li id='li1'>{t('MAIN PAGE.1')}</li></Link></LinkS>
+        <LinkS activeClass="active" to="h1" spy={true} smooth={true} offset={-300} duration={1000}><Link href='/about'><li>{t('ABOUT ME.1')}</li></Link></LinkS>
+        <LinkS activeClass="active" to="form" spy={true} smooth={true} offset={-300} duration={1000}><Link href='/contact'><li>{t('CONTACT.1')}</li></Link></LinkS>
       </ul> : null}
       
         <Box

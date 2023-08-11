@@ -55,7 +55,7 @@ const stylep = {
       <h1 className={`fade-in`} style={styleh}>
         <mark style={{ backgroundColor: color, transition: '1s' }}>{t('Hello.1')}</mark>, {t("i'm.1")}
       </h1>
-      <h1 className={`fade-in`} style={styleh}>Marcin Wiśniewski</h1>
+      <h1 className={`fade-in`} id='name' style={styleh}>Marcin Wiśniewski</h1>
       <p className={`fade-in-p`} style={stylep}>{t('A freelance front-end developer.1')}</p>
       <Link activeClass="active" to="projects" spy={true} smooth={true} offset={-120} duration={1000}>
         <IconButton className={`fade-in-icon`} sx={{ '&:hover': { transform: 'translate(0px, 15px)', transition: '.5s ease-in-out' } }}>

@@ -21,13 +21,15 @@
         "1": "Jestem"
     },
     "programer": {
-        "1": "programistą"
+        "1": "programistą",
+        "2": "PROGRAMOWANIE"
     },
     "chess player and boxer": {
         "1": "szachistą i bokserem"
     },
     "paragraph": {
-        "1": "Jestem wszechstronną osobą o różnorodnych zainteresowaniach. Jako amatorski bokser,  zaspokajam swoją potrzebę do fizycznych wyzwań i skupiam moją determinację na doskonaleniu umiejętności w ringu. Poza tym, jestem półprofesjonalnym graczem szachowym co świadczy o moim strategicznym myśleniu i zdolności do przewidywania wielu ruchów naprzód. Łącząc moje umiejętności sportowe i umysł strategiczny maluję się jako wszechstronna osoba, która kwitnie w obliczu wyzwań zarówno w świecie cyfrowym, jak i fizycznym."
+        "1": "Jestem wszechstronną osobą o różnorodnych zainteresowaniach. Jako amatorski bokser,  zaspokajam swoją potrzebę do fizycznych wyzwań i skupiam moją determinację na doskonaleniu umiejętności w ringu. Poza tym, jestem półprofesjonalnym graczem szachowym co świadczy o moim strategicznym myśleniu i zdolności do przewidywania wielu ruchów naprzód. Łącząc moje umiejętności sportowe i umysł strategiczny maluję się jako wszechstronna osoba, która kwitnie w obliczu wyzwań zarówno w świecie cyfrowym, jak i fizycznym.",
+        "2": "Przez ostatnie pare lat nauczyłem się wiele umiejętności wykorzystywanych przez front-end developerów. Przez ten czas nauczyłem się wykorzystywać HTML, CSS, JavaScript, React oraz Material UI"
     },
     "Send me a ": {
         "1": "Wyślij mi  "

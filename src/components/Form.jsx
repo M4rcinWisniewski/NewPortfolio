@@ -37,7 +37,7 @@ const Form = () => {
     const {t} = useTranslation();
 
     return (
-        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', flexDirection: 'column'}}>
+        <Box id='form'sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', flexDirection: 'column'}}>
             <Typography className='fade-in' variant='h1' style={{ margin: '10vh', fontSize: '2rem', fontWeight: '600', marginBottom: '2vh', textAlign: 'center'}}>{t("Send me a .1")}<mark style={{backgroundColor: color, transition: '1s'}}>{t("message!.1")}</mark></Typography>
             <Typography className='fade-in-p' sx={{marginBottom: '10vh', color: 'gray', textAlign: 'center'}} variant="h6">{t("If you want to ask a question or hire me fill the form below!.1")}</Typography>
             <form className='fade-in-p' style={{display: 'flex', justifyContent: 'center', alignItems: 'center',gap: '5vh', flexDirection: 'column',}}onSubmit={sendEmail}>
