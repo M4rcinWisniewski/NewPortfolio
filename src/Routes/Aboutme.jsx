@@ -43,7 +43,7 @@ const AboutMe = () => {
             </div>
             <img  id='img-small'className="fade-in" src={prof} alt="" style={{width: '25vw', minWidth: '300px',}} />
         </Box>
-        <Box sx={{display:'flex', alignItems:'center', height: 'auto', justifyContent: 'center', marginLeft: '15vw', marginRight: '15vw', flexWrap: 'wrap', gap: '15vh', flexDirection: 'row-reverse'}}>
+        <Box sx={{display:'flex', alignItems:'center', height: 'auto', justifyContent: 'center', marginLeft: '15vw', marginRight: '15vw', flexWrap: 'wrap', gap: '15vh', flexDirection: 'column'}}>
           <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column',marginLeft: '5vw', marginRight: '5vw',  }}>
           <Typography variant="h1" sx={{ fontSize: '220%', textAlign: 'center'}}>{t("programer.2")}</Typography>
             <p style={{minWidth: '300px', width: '35vw', color: '#606060', textAlign: 'justify'}}>{t("paragraph.2")}
