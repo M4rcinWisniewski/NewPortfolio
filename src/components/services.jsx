@@ -1,4 +1,4 @@
-import { Box, Typography, Button } from "@mui/material"
+import { Box, Typography,} from "@mui/material"
 import  image  from '../images/Microsites-bro.png'
 import image1 from '../images/Microsites-pana.png'
 import image2 from '../images/Microsites-rafiki.png'
@@ -57,8 +57,7 @@ const Services = ({theme}) => {
                         </div>
 
                 </div>
-                <Typography sx={{fontSize: '1.5rem', fontWeight: '600', marginTop: '-2vh', color: 'inherit'}}>{t("$50")}</Typography>
-                <Button variant="text" sx={{justifySelf:'flex-end', color: 'inherit', margin:'.5vh'}}>Read more</Button>
+                <Typography sx={{fontSize: '1rem', fontWeight: '600', marginTop: '-2vh', color: 'inherit', textAlign:' center'}}>{t("DM")}</Typography>
             </Box></Link></LinkS>
             <LinkS activeClass="active" to="form" spy={true} smooth={true} offset={-300} duration={1000}><Link href='/contact'><Box sx={{width: '17vw' , 
             margin: '4vw', 
@@ -113,8 +112,7 @@ const Services = ({theme}) => {
                         </div>
                     
                 </div>
-                <Typography sx={{fontSize: '1.5rem', fontWeight: '600', marginTop: '-2vh', color: 'inherit'}}>{t("$100")}</Typography>
-                <Button variant="text" sx={{justifySelf:'flex-end', color: 'inherit', margin:'.5vh'}}>Read more</Button>
+                <Typography sx={{fontSize: '1rem', fontWeight: '600', marginTop: '-2vh', color: 'inherit', textAlign:' center'}}>{t("DM")}</Typography>
             </Box></Link></LinkS>
             <LinkS activeClass="active" to="form" spy={true} smooth={true} offset={-300} duration={1000}><Link href='/contact'><Box sx={{
                 width: '14vw' , 
@@ -150,8 +148,7 @@ const Services = ({theme}) => {
 
 
                 </div>
-                <Typography sx={{fontSize: '1.5rem', fontWeight: '600', marginTop: '-2vh', color: 'inherit'}}>{t("$70")}</Typography>
-                <Button variant="text" sx={{justifySelf:'flex-end', color: 'inherit', margin:'.5vh'}}>Read more</Button>
+                <Typography sx={{fontSize: '1rem', fontWeight: '600', marginTop: '-2vh', color: 'inherit', textAlign:' center'}}>{t("DM")}</Typography>
             </Box></Link></LinkS>
             
         </Box>

@@ -83,5 +83,6 @@
     "$100":"$100",
     "$70": "$80",
     "order": "ORDER!",
-    "custom": "If you want a custom service, just contact me!"
+    "custom": "If you want a custom service, just contact me!",
+    "DM": "Text me for more details"
 }
