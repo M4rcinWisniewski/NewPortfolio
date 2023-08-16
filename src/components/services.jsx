@@ -155,7 +155,7 @@ const Services = ({theme}) => {
             </Box></Link></LinkS>
             
         </Box>
-            <Typography sx={{fontSize: '1.2rem'}}>{t("custom")}</Typography>
+            <Typography sx={{fontSize: '1.2rem', textAlign:'center'}}>{t("custom")}</Typography>
         </Box>
     )
 }
