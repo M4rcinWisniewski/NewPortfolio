@@ -1,3 +1,6 @@
+/* import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css"; */
+
 body {
   margin: 0;
 }
@@ -33,13 +36,41 @@ transform: translate(0px, 5px);
     display: block;
   }
   #img-small{
-    display: none;
-  }
-  #h1 {
-    margin-top: 25vh;
+    margin-top: 15vh;
+    height: auto;
+    margin-bottom: -5vh;
   }
 
+  #img-title {
+     margin-top: 10vh
+  }
+
+
+  @media screen and (max-width: 835px){
+  #title {
+    height: auto;
+    align-items: center;
+  }
+  #name {
+    text-align: center;
+  }
+
+  
+  }
+
+  @media screen and (max-width: 1096px){
+    #contact{
+      column-gap: -30vh;
+      flex-direction: column;
+    }
+    #img {
+      margin-top: 10vh;
+      margin-bottom: -25vh;
+      margin-left: 10vw;
+    }
+  }
 }
+
 .fade-in {
   opacity: 0;
   animation: fadeInAnimation 1s forwards;

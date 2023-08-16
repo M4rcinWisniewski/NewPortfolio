@@ -1,9 +1,11 @@
-import { Box, IconButton } from "@mui/material";
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import { Box, Button } from "@mui/material";
+
 import React, { useEffect,  useState } from 'react';
 import { Link } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
 import '../App.css'; // Import your animation CSS
+import gif from '../images/log.gif'
+import gifDark from '../images/Developer activity.gif'
 
 export const getRandomColor = () => {
   const letters = '0123456789ABCDEF';
@@ -17,19 +19,20 @@ export const getRandomColor = () => {
     }
   return color;
 };
-const Landing = () => {
+const Landing = ({theme}) => {
   const [color, setColor] = useState(getRandomColor());
   
 
   const styleh = {
     margin: '0',
-    fontSize: '4rem',
-    textAlign: 'center'
+    fontSize: '3.5rem',
+    // textAlign: 'left'
     
 }
 const stylep = {
     color: '#606060',
-    fontSize: '1.5rem'
+    fontSize: '1.5rem',
+    // textAlign: 'left'
     
 }
 
@@ -42,27 +45,45 @@ const stylep = {
   }, []);
   const {t} = useTranslation()
   return (
-    <Box sx={{
+    
+    <Box sx={{display: 'flex', justifyContent: 'center' , alignItems: 'center', flexDirection: 'row-reverse', gap:' 15vw', flexWrap: 'wrap', marginBottom: '10vh'}}>
+    <div style={{background: 'transparent'}}>
+      <img className={`fade-in`} id='img-title'style={{width: '25vw', minWidth: '190px', marginBottom: 0}} src={theme ? gif : gifDark} alt=""/> </div>
+    <Box id="title" sx={{
       display: 'flex',
       justifyContent:' center',
-      alignItems: 'center',
+      alignItems: 'left',
       height: '100vh',
       flexDirection: 'column',
       fontFamily: 'Work Sans, sans-serif',
       
       
+      
   }}>
-      <h1 className={`fade-in`} style={styleh}>
-        <mark style={{ backgroundColor: color, transition: '1s' }}>{t('Hello.1')}</mark>, {t("i'm.1")}
+      
+      <h1 className={`fade-in`} style={styleh} >
+        <mark style={{ backgroundColor: color, transition: '1s',}}>{t('Hello.1')}</mark>, {t("i'm.1")}
       </h1>
       <h1 className={`fade-in`} id='name' style={styleh}>Marcin Wiśniewski</h1>
       <p className={`fade-in-p`} style={stylep}>{t('A freelance front-end developer.1')}</p>
-      <Link activeClass="active" to="projects" spy={true} smooth={true} offset={-120} duration={1000}>
-        <IconButton className={`fade-in-icon`} sx={{ '&:hover': { transform: 'translate(0px, 15px)', transition: '.5s ease-in-out' } }}>
+      <Link activeClass="active" to="services" spy={true} smooth={true} offset={-120} duration={1000}>
+        {/* <IconButton className={`fade-in-icon`} sx={{'&:hover': { transform: 'translate(0px, 15px)', transition: '.5s ease-in-out' } }}>
           <ArrowDownwardIcon />
-        </IconButton>
+        </IconButton> */}
+        <Button variant="outlined" sx={{
+          color: 'inherit', 
+          bgcolor:'#EB7777',
+          transition:'.3s',
+          borderRadius:'10px',
+          fontWeight:'600',
+          '&:hover': {
+             
+            outline:'1px solid #EB7777',
+            }}} >{t("check")}</Button>
       </Link>
     </Box>
+    </Box>
+    
   )
 }
 

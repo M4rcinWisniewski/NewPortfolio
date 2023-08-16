@@ -67,6 +67,21 @@
     "Sorry": "Sorry, we couldn't find it either :c",
     "Go back to homepage": {
         "1": "Go back to homepage"
-    }
-
+    },
+    "check": "Check out!",
+    "Services": "Services",
+    "Bussines website": "Bussines website",
+    "pages": {
+        "1": "One page",
+        "2": "1-3 pages",
+        "3": "5+ pages"
+    },
+    "Modern design": "Modern design",
+    "Setup hosting": "Setup hosting",
+    "support": "2 week support",
+    "$50": "$70",
+    "$100":"$100",
+    "$70": "$80",
+    "order": "ORDER!",
+    "custom": "If you want a custom service, just contact me!"
 }

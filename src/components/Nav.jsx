@@ -5,9 +5,11 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MenuIcon from '@mui/icons-material/Menu';
+import ClearIcon from '@mui/icons-material/Clear';
 import {Link} from 'wouter'
 import { useTranslation } from 'react-i18next';
-import {Link as LinkS} from 'react-scroll'
+// import {Link as LinkS} from 'react-scroll'
+// import { Warning } from '@mui/icons-material';
 // import WorkIcon from '@mui/icons-material/WorkOutline';
 
 export const themeLight = createTheme({
@@ -34,7 +36,7 @@ export default function Nav({ theme, handleTheme }) {
     const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1000);
     const [isOpen, setIsOpen] = useState(false)
     const [isValue, setValue] = useState(localStorage.getItem('selectedLanguage') || 'en');
-    
+    // const [color, setColor] = useState(getRandomColor());
     const handleChange = (event) => {
       const selectedValue = event.target.value;
       setValue(selectedValue);
@@ -62,6 +64,7 @@ export default function Nav({ theme, handleTheme }) {
   const handleLangChange = lang => {
     i18n.changeLanguage(lang)
   }
+  const menu = isOpen ? <ClearIcon onClick={handleClick} style={{cursor: 'pointer'}}/> : <MenuIcon onClick={handleClick} style={{cursor: 'pointer'}}/> 
   return (
     <Box
       sx={{
@@ -73,11 +76,12 @@ export default function Nav({ theme, handleTheme }) {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        padding:'3vw',
+        padding:'3.5vw',
+        
         
       }}
     >
-      {isSmallScreen ? <MenuIcon onClick={handleClick} style={{cursor: 'pointer'}}/>
+      {isSmallScreen ? menu
       : <ul
       id='ul'
         style={{
@@ -91,9 +95,9 @@ export default function Nav({ theme, handleTheme }) {
           
         }}
       >
-        <LinkS activeClass="active" to="name" spy={true} smooth={true} offset={-300} duration={1000}><Link href='/'><li id='li1'>{t('MAIN PAGE.1')}</li></Link></LinkS>
-        <LinkS activeClass="active" to="h1" spy={true} smooth={true} offset={-300} duration={1000}><Link href='/about'><li>{t('ABOUT ME.1')}</li></Link></LinkS>
-        <LinkS activeClass="active" to="form" spy={true} smooth={true} offset={-300} duration={1000}><Link href='/contact'><li>{t('CONTACT.1')}</li></Link></LinkS>
+        <Link href='/'><li id='li1'>{t('MAIN PAGE.1')}</li></Link>
+        <Link href='/about'><li>{t('ABOUT ME.1')}</li></Link>
+        <Link href='/contact'><li>{t('CONTACT.1')}</li></Link>
       </ul> 
       }
       {isOpen ? <ul
@@ -116,9 +120,9 @@ export default function Nav({ theme, handleTheme }) {
             zIndex: '999', // Adjust the z-index as needed
           }}
         >
-        <LinkS activeClass="active" to="name" spy={true} smooth={true} offset={-300} duration={1000}><Link href='/'><li id='li1'>{t('MAIN PAGE.1')}</li></Link></LinkS>
-        <LinkS activeClass="active" to="h1" spy={true} smooth={true} offset={-300} duration={1000}><Link href='/about'><li>{t('ABOUT ME.1')}</li></Link></LinkS>
-        <LinkS activeClass="active" to="form" spy={true} smooth={true} offset={-300} duration={1000}><Link href='/contact'><li>{t('CONTACT.1')}</li></Link></LinkS>
+        <Link href='/'><li id='li1'>{t('MAIN PAGE.1')}</li></Link>
+        <Link href='/about'><li>{t('ABOUT ME.1')}</li></Link>
+        <Link href='/contact'><li>{t('CONTACT.1')}</li></Link>
       </ul> : null}
       
         <Box

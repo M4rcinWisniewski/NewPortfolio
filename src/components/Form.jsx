@@ -7,7 +7,8 @@ import '../App.css'
 import { useTranslation } from "react-i18next";
 
 const width = {
-    width: '30vw'
+    width: '15vw',
+    minWidth: '200px'
 }
 
 const Form = () => {
@@ -45,7 +46,7 @@ const Form = () => {
                     <TextField name="name" variant="outlined" label={t("Your name.1")} sx={width} color="info" />
                     <TextField name="email" variant="outlined" label={t("Your email.1")} sx={width} color="info" />
                 </Box>
-                <TextField name="message" variant="outlined" label={t("Your message.1")} sx={{ width: '65vw' }} color="info" multiline />
+                <TextField name="message" variant="outlined" label={t("Your message.1")} sx={{ width: '35vw', minWidth: '425px' }} color="info" multiline />
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Button type="submit" variant="" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '.5vw' }}>
                         {t("Send.1")} <SendIcon sx={{ fontSize: '1.1rem', marginBottom: '2px' }} />
