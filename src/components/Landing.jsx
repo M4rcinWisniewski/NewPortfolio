@@ -73,20 +73,22 @@ const stylep = {
         {/* <IconButton className={`fade-in-icon`} sx={{'&:hover': { transform: 'translate(0px, 15px)', transition: '.5s ease-in-out' } }}>
           <ArrowDownwardIcon />
         </IconButton> */}
-        <Box sx={{display:'flex', gap:'10px'}}>
-          <Box sx={{width:'100px', border:' 1px solid', display:'flex', justifyContent:'center', alignItems:'center',
-            height:'35px'}}>
+        <Box sx={{display:'flex', gap:'10px', }}>
+          <Box sx={{width:'100px', display:'flex', justifyContent:'center', alignItems:'center', zIndex:'1',
+            height:'35px',background: '#f0804f', borderRadius: '77% 24% 70% 30% / 58% 41% 57% 43%    ', '&:hover': {
+              
+            }}}>
             <Typography>HTML</Typography>
           </Box>
-          <Box sx={{width:'100px', border:' 1px solid', display:'flex', justifyContent:'center', alignItems:'center',
-             height:'35px'}}>
+          <Box sx={{width:'100px', display:'flex', justifyContent:'center', alignItems:'center', zIndex:'1',
+             height:'35px', borderRadius: '31% 73% 12% 88% / 38% 73% 32% 61%    ', background:'#5788fa', cursor:'pointer'}}>
             <Typography>CSS</Typography>
           </Box>
-          <Box sx={{width:'100px', border:' 1px solid', display:'flex', justifyContent:'center', alignItems:'center',
+          <Box sx={{width:'100px', borderRadius: '99% 8% 12% 59% / 34% 11% 83% 46%   ', background:'#f0db4f',display:'flex', justifyContent:'center', alignItems:'center', zIndex:'1',
              height:'35px'}}>
             <Typography>JavaScript</Typography>
           </Box>
-          <Box sx={{width:'100px', border:' 1px solid', display:'flex', justifyContent:'center', alignItems:'center',
+          <Box sx={{width:'100px', background:'#61dbfb', borderRadius:'43% 50% 12% 89% / 38% 90% 6% 83%  ', display:'flex', justifyContent:'center', alignItems:'center', zIndex:'1',
              height:'35px'}}>
             <Typography>React</Typography>
           </Box>
@@ -96,7 +98,6 @@ const stylep = {
           color: 'inherit', 
           bgcolor:'#EB7777',
           transition:'.3s',
-          borderRadius:'0px',
           fontWeight:'600',
           width:'430px',
           '&:hover': {
