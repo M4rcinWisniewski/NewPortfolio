@@ -1,4 +1,4 @@
-import { Box, Button } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 // import '../../public/llline.svg'
 import React, { useEffect,  useState } from 'react';
 import { Link } from 'react-scroll';
@@ -73,12 +73,32 @@ const stylep = {
         {/* <IconButton className={`fade-in-icon`} sx={{'&:hover': { transform: 'translate(0px, 15px)', transition: '.5s ease-in-out' } }}>
           <ArrowDownwardIcon />
         </IconButton> */}
+        <Box sx={{display:'flex', gap:'10px'}}>
+          <Box sx={{width:'100px', border:' 1px solid', display:'flex', justifyContent:'center', alignItems:'center',
+            height:'35px'}}>
+            <Typography>HTML</Typography>
+          </Box>
+          <Box sx={{width:'100px', border:' 1px solid', display:'flex', justifyContent:'center', alignItems:'center',
+             height:'35px'}}>
+            <Typography>CSS</Typography>
+          </Box>
+          <Box sx={{width:'100px', border:' 1px solid', display:'flex', justifyContent:'center', alignItems:'center',
+             height:'35px'}}>
+            <Typography>JavaScript</Typography>
+          </Box>
+          <Box sx={{width:'100px', border:' 1px solid', display:'flex', justifyContent:'center', alignItems:'center',
+             height:'35px'}}>
+            <Typography>React</Typography>
+          </Box>
+        </Box>
+        <br/>
         <Button variant="outlined" sx={{
           color: 'inherit', 
           bgcolor:'#EB7777',
           transition:'.3s',
-          borderRadius:'10px',
+          borderRadius:'0px',
           fontWeight:'600',
+          width:'430px',
           '&:hover': {
              
             outline:'1px solid #EB7777',

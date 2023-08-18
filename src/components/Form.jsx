@@ -23,7 +23,6 @@ const Form = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        // Replace these values with your actual emailjs service configuration
         const serviceId = 'service_onbemwv';
         const templateId = 'template_hvmxiz9';
         const userId = 'ajYgf-wmRFz9yN0Z0';
@@ -39,6 +38,9 @@ const Form = () => {
 
     return (
         <Box id='form'sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', flexDirection: 'column'}}>
+                    {/* <svg style={{transform: 'scale(.8)', position:'absolute', top:'5%', left:'15%', zIndex: '0', overflow:'hidden', opacity: '30%'}}xmlns="http://www.w3.org/2000/svg" width="90%" height="100%">
+          <image   xlinkHref="/blob.svg" width="125%" height="100%" />
+        </svg> */}
             <Typography className='fade-in' variant='h1' style={{ margin: '10vh', fontSize: '2rem', fontWeight: '600', marginBottom: '2vh', textAlign: 'center'}}>{t("Send me a .1")}<mark style={{backgroundColor: color, transition: '1s'}}>{t("message!.1")}</mark></Typography>
             <Typography className='fade-in-p' sx={{marginBottom: '10vh', color: 'gray', textAlign: 'center'}} variant="h6">{t("If you want to ask a question or hire me fill the form below!.1")}</Typography>
             <form className='fade-in-p' style={{display: 'flex', justifyContent: 'center', alignItems: 'center',gap: '5vh', flexDirection: 'column',}}onSubmit={sendEmail}>

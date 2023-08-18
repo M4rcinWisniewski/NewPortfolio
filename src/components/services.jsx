@@ -23,6 +23,7 @@ const Services = ({theme}) => {
         <svg style={{transform: 'scale(1.15)', position:'absolute', top:'0%', left:'0', zIndex: '0', overflow:'hidden', opacity: '50%'}}xmlns="http://www.w3.org/2000/svg" width="90%" height="100%">
           <image   xlinkHref="/sssplatter.svg" width="100vw" height="100%" />
         </svg>
+
             <Typography sx={{fontSize: '2.5rem', fontWeight: '600', zIndex: '1'}}>{t("Services")}</Typography>
         <Box sx={{
             display: 'flex', 
