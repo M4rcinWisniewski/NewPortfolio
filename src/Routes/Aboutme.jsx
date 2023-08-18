@@ -29,7 +29,10 @@ const AboutMe = ({ theme }) => {
       const {t} = useTranslation()
     return (
       <Box sx={{ display: 'flex', justifyContent:'center', alignItems: 'center', flexDirection: 'column', width:'auto', height:'auto'}}>
-        <Box style={{display:'flex', alignItems:'center', height: 'auto', justifyContent: 'center', flexWrap: 'wrap-reverse', gap: '5vh' }}>
+        <svg style={{transform: 'scale(1.2)', position:'absolute', top:'0', left:'0', zIndex: '0', overflow:'hidden'}}xmlns="http://www.w3.org/2000/svg" width="90%" height="100%">
+          <image   xlinkHref="/llline1.svg" width="100vw" height="100%" />
+        </svg>
+        <Box style={{display:'flex', alignItems:'center', height: 'auto', justifyContent: 'center', flexWrap: 'wrap-reverse', gap: '5vh', }}>
           <br></br>
           <br></br>
           <br></br>
@@ -40,7 +43,7 @@ const AboutMe = ({ theme }) => {
                 <p className={`fade-in-p`} style={{minWidth: '300px', width: '30vw', color: '#606060', textAlign: 'justify'}}>
                     {t("paragraph.1")}. {t("paragraph.2")}</p>
             </div>
-            <img  id='img-small' src={theme ? prof: prof2 } alt="" style={{width: '25vw', minWidth: '300px',}} />
+            <img  id='img-small' src={theme ? prof: prof2 } alt="" style={{width: '25vw', minWidth: '300px', zIndex:'0', opacity:'75%'}} />
         </Box>
         
       </Box>

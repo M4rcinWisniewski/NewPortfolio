@@ -10,6 +10,7 @@ const Footer =() => {
             marginBottom:'-5vw',
             
             }}>
+
             <p style={{
                 display: 'flex', 
                 justifyContent: 'center', 

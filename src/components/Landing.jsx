@@ -1,12 +1,12 @@
 import { Box, Button } from "@mui/material";
-
+// import '../../public/llline.svg'
 import React, { useEffect,  useState } from 'react';
 import { Link } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
 import '../App.css'; // Import your animation CSS
 import gif from '../images/log.gif'
 import gifDark from '../images/Developer activity.gif'
-
+// import svgbg from "../../public"
 export const getRandomColor = () => {
   const letters = '0123456789ABCDEF';
   let color = '#';
@@ -47,6 +47,9 @@ const stylep = {
   return (
     
     <Box sx={{display: 'flex', justifyContent: 'center' , alignItems: 'center', flexDirection: 'row-reverse', gap:' 15vw', flexWrap: 'wrap', marginBottom: '10vh'}}>
+      <svg style={{transform: 'scale(1)', position:'absolute', top:'10%', left:'0'}}xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+        <image   xlinkHref="/llline.svg" width="100vw" height="100%" />
+      </svg>
     <div style={{background: 'transparent'}}>
       <img className={`fade-in`} id='img-title'style={{width: '25vw', minWidth: '190px', marginBottom: 0}} src={theme ? gif : gifDark} alt=""/> </div>
     <Box id="title" sx={{
@@ -66,7 +69,7 @@ const stylep = {
       </h1>
       <h1 className={`fade-in`} id='name' style={styleh}>Marcin Wiśniewski</h1>
       <p className={`fade-in-p`} style={stylep}>{t('A freelance front-end developer.1')}</p>
-      <Link activeClass="active" to="services" spy={true} smooth={true} offset={-120} duration={1000}>
+      <Link activeClass="active" to="services" spy={true} smooth={true} offset={-110} duration={1000}>
         {/* <IconButton className={`fade-in-icon`} sx={{'&:hover': { transform: 'translate(0px, 15px)', transition: '.5s ease-in-out' } }}>
           <ArrowDownwardIcon />
         </IconButton> */}

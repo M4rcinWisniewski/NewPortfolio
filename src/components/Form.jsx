@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 
 const width = {
     width: '15vw',
-    minWidth: '200px'
+    minWidth: '170px'
 }
 
 const Form = () => {
@@ -42,11 +42,11 @@ const Form = () => {
             <Typography className='fade-in' variant='h1' style={{ margin: '10vh', fontSize: '2rem', fontWeight: '600', marginBottom: '2vh', textAlign: 'center'}}>{t("Send me a .1")}<mark style={{backgroundColor: color, transition: '1s'}}>{t("message!.1")}</mark></Typography>
             <Typography className='fade-in-p' sx={{marginBottom: '10vh', color: 'gray', textAlign: 'center'}} variant="h6">{t("If you want to ask a question or hire me fill the form below!.1")}</Typography>
             <form className='fade-in-p' style={{display: 'flex', justifyContent: 'center', alignItems: 'center',gap: '5vh', flexDirection: 'column',}}onSubmit={sendEmail}>
-                <Box sx={{ display: 'flex', gap: '5vw' }}>
+                <Box sx={{ display: 'flex', gap: '5vw', flexWrap:'wrap'}}>
                     <TextField name="name" variant="outlined" label={t("Your name.1")} sx={width} color="info" />
                     <TextField name="email" variant="outlined" label={t("Your email.1")} sx={width} color="info" />
                 </Box>
-                <TextField name="message" variant="outlined" label={t("Your message.1")} sx={{ width: '35vw', minWidth: '425px' }} color="info" multiline />
+                <TextField name="message" variant="outlined" label={t("Your message.1")} sx={{ width: '35vw', minWidth: '370px' }} color="info" multiline />
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Button type="submit" variant="" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '.5vw' }}>
                         {t("Send.1")} <SendIcon sx={{ fontSize: '1.1rem', marginBottom: '2px' }} />

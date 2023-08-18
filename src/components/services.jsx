@@ -17,19 +17,26 @@ const Services = ({theme}) => {
             display: 'flex', 
             justifyContent:'center', 
             alignItems: 'center', 
-            flexDirection: 'column'}}>
-            <Typography sx={{fontSize: '2.5rem', fontWeight: '600'}}>{t("Services")}</Typography>
+            flexDirection: 'column',
+            position:'relative',
+            overflow: 'hidden',}}>
+        <svg style={{transform: 'scale(1.15)', position:'absolute', top:'0%', left:'0', zIndex: '0', overflow:'hidden', opacity: '50%'}}xmlns="http://www.w3.org/2000/svg" width="90%" height="100%">
+          <image   xlinkHref="/sssplatter.svg" width="100vw" height="100%" />
+        </svg>
+            <Typography sx={{fontSize: '2.5rem', fontWeight: '600', zIndex: '1'}}>{t("Services")}</Typography>
         <Box sx={{
             display: 'flex', 
             justifyContent: 'center', 
             alignItems: 'center', 
             margin: '0 1vw 0 ',
-            flexWrap:'wrap'}}>
+            flexWrap:'wrap'
+            , 
+                zIndex: '2',}}>
              <LinkS activeClass="active" to="form" spy={true} smooth={true} offset={-300} duration={1000}><Link href='/contact'><Box sx={{
                 width: '14vw' , 
                 margin: '2vw', 
                 height: '50vh', 
-                backgroundColor: theme ? '#dddddd': 'rgba(46, 46, 46, .7)', 
+                backgroundColor: theme ? 'rgba(222, 222, 222, 0.6)': 'rgba(46, 46, 46, .7)', 
                 display: 'flex', 
                 alignItems: 'center', 
                 minWidth:'200px',
@@ -37,7 +44,8 @@ const Services = ({theme}) => {
                 flexDirection: 'column',
                 justifyContent: 'space-between',
                 transition: '.3s',
-                cursor:'pointer',
+                cursor:'pointer', 
+                zIndex: '2',
                 '&:hover': {
                     width:'16vw',
                     height: '54vh',
@@ -70,7 +78,8 @@ const Services = ({theme}) => {
             flexDirection: 'column',
             justifyContent: 'space-between',
             transition: '.3s',
-            cursor:'pointer',
+            cursor:'pointer', 
+            zIndex: '1',
             '&:hover': {
                 width:'19vw',
                 height: '61vh',
@@ -118,7 +127,7 @@ const Services = ({theme}) => {
                 width: '14vw' , 
                 margin: '2vw', 
                 height: '50vh', 
-                backgroundColor: theme ? '#dddddd': 'rgba(46, 46, 46, .7)', 
+                backgroundColor: theme ? 'rgba(222, 222, 222, 0.6)': 'rgba(46, 46, 46, .9)', 
                 display: 'flex', 
                 alignItems: 'center',
                 justifyContent: 'space-between', 
@@ -127,7 +136,8 @@ const Services = ({theme}) => {
                 flexDirection: 'column',
                 transition: '.3s',
                 position: 'relative',
-                cursor:'pointer',
+                cursor:'pointer', 
+                zIndex: '10',
                 '&:hover': {
                     width:'16vw',
                     height: '54vh',
