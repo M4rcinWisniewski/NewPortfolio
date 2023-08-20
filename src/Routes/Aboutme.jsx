@@ -37,7 +37,7 @@ const AboutMe = ({ theme }) => {
           <br></br>
           <br></br>
             <div style={{display: 'flex', flexDirection: 'column',justifyContent: 'center', alignItems:'center',  height: '90vh',  }}>
-            <h1 id='h1' className="fade-in-p" style={{ textAlign: 'center', fontSize: '220%',}}>{t("I'm a.1")} <mark style={{ backgroundColor: color, transition: '1s', }}>{t("programer.1")}</mark>, {t("chess player and boxer.1")}
+            <h1 id='h1' className="fade-in-p" style={{ textAlign: 'center', fontSize: '220%',zIndex:'1000'}}>{t("I'm a.1")} <mark style={{ backgroundColor: color, transition: '1s', }}>{t("programer.1")}</mark>, {t("chess player and boxer.1")}
                 
             </h1>
                 <p className={`fade-in-p`} style={{minWidth: '300px', width: '30vw', color: '#606060', textAlign: 'justify'}}>

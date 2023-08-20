@@ -112,7 +112,7 @@ useEffect(() => {
           overlay={<span>JavaScript</span>}>
             <Box sx={{width:'50px',display:'flex', justifyContent:'center', alignItems:'center', zIndex:'1',
              height:'35px'}}>
-            <img src={jslogo} alt="" style={{width: '40px'}}/>
+            <img src={jslogo} alt="" style={{width: '35px'}}/>
           </Box></Tooltip>
           <Tooltip
           placement="bottom"
