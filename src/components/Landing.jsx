@@ -9,7 +9,7 @@ import { Link } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
 import '../App.css'; // Import your animation CSS
 import gif from '../images/log.gif'
-import gifDark from '../images/Developer activity.gif'
+import gifDark from '../images/Developer activity1.gif'
 import "rc-tooltip/assets/bootstrap.css";
 import Tooltip from "rc-tooltip";
 
@@ -40,6 +40,7 @@ const Landing = ({theme}) => {
 const stylep = {
     color: '#606060',
     fontSize: '1.5rem',
+    
     // textAlign: 'left'
     
 }
@@ -61,12 +62,12 @@ useEffect(() => {
   const {t} = useTranslation()
   return (
     
-    <Box sx={{display: 'flex', justifyContent: 'center' , alignItems: 'center', flexDirection: 'row-reverse', gap:' 15vw', flexWrap: 'wrap', marginBottom: '10vh'}}>
-      <svg style={{transform: 'scale(1)', position:'absolute', top:'10%', left:'0'}}xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+    <Box sx={{display: 'flex', justifyContent: 'center' , alignItems: 'center', flexDirection: 'row-reverse', gap:' 15vw', flexWrap:'wrap', marginBottom: '10vh'}}>
+      <svg style={{transform: 'scale(1)', position:'absolute', top:'10%', left:'0', zIndex:'1'}}xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
         <image   xlinkHref="/llline.svg" width="100vw" height="100%" />
       </svg>
     <div style={{background: 'transparent'}}>
-      <img className={`fade-in`} id='img-title'style={{width: '25vw', minWidth: '190px', marginBottom: 0}} src={theme ? gif : gifDark} alt=""/> </div>
+      <img className={`fade-in`} id='img-title'style={{width: '25vw', minWidth: '190px', marginBottom: 0, zIndex:'0'}} src={theme ? gif : gifDark} alt=""/> </div>
     <Box id="title" sx={{
       display: 'flex',
       justifyContent:' center',
@@ -74,6 +75,7 @@ useEffect(() => {
       height: '100vh',
       flexDirection: 'column',
       fontFamily: 'Work Sans, sans-serif',
+      zIndex:'2'
       
       
       
@@ -131,7 +133,7 @@ useEffect(() => {
         <Link activeClass="active" to="services" spy={true} smooth={true} offset={-110} duration={1000}>
         <Button variant="outlined" sx={{
           color: 'inherit', 
-          bgcolor:'#EB7777',
+          bgcolor:theme ? '#EB7777' : '#DA5656',
           transition:'.3s',
           fontWeight:'600',
           width:'12vw',

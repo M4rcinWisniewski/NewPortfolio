@@ -65,12 +65,14 @@ transform: translate(0px, 5px);
       margin-left: 10vw;
     }
 
+
   }
 
 @media screen and (max-width: 835px){
   #title {
     height: auto;
     align-items: center;
+    margin-top: 10vh;
   }
 
   #button {
@@ -79,6 +81,21 @@ transform: translate(0px, 5px);
   #name {
     text-align: center;
     font-size: 2.7rem;
+
+  }
+}
+
+@media screen and (max-width: 645px){
+  #name {
+    text-align: center;
+    font-size: 2.7rem;
+    margin-top: 0;
+
+  }
+  #title {
+    height: auto;
+    align-items: center;
+    margin-top: 0vh;
   }
 }
 .fade-in {

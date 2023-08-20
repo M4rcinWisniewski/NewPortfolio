@@ -23,9 +23,9 @@ const Form = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        const serviceId = 'service_onbemwv';
-        const templateId = 'template_hvmxiz9';
-        const userId = 'ajYgf-wmRFz9yN0Z0';
+        const serviceId = '';
+        const templateId = '';
+        const userId = '';
 
         emailjs.sendForm(serviceId, templateId, e.target, userId)
             .then((result) => {
