@@ -1,12 +1,18 @@
-import { Box, Button, Typography } from "@mui/material";
-// import '../../public/llline.svg'
+import { Box, Button } from "@mui/material";
+import  reactlogo  from '../images/reactlogo.png';
+import  jslogo  from '../images/Jslogo.png'
+import csslogo from '../images/csslogo.png'
+import html from '../images/html.png'
+import mui from '../images/MUI.png'
 import React, { useEffect,  useState } from 'react';
 import { Link } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
 import '../App.css'; // Import your animation CSS
 import gif from '../images/log.gif'
 import gifDark from '../images/Developer activity.gif'
-// import svgbg from "../../public"
+import "rc-tooltip/assets/bootstrap.css";
+import Tooltip from "rc-tooltip";
+
 export const getRandomColor = () => {
   const letters = '0123456789ABCDEF';
   let color = '#';
@@ -21,11 +27,13 @@ export const getRandomColor = () => {
 };
 const Landing = ({theme}) => {
   const [color, setColor] = useState(getRandomColor());
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  
   
 
   const styleh = {
     margin: '0',
-    fontSize: '3.5rem',
+    
     // textAlign: 'left'
     
 }
@@ -35,7 +43,14 @@ const stylep = {
     // textAlign: 'left'
     
 }
+useEffect(() => {
+  const handleResize = () => {
+    setScreenWidth(window.innerWidth);
+  };
 
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
   useEffect(() => {
     const intervalId = setInterval(() => {
       const newColor = getRandomColor();
@@ -64,47 +79,71 @@ const stylep = {
       
   }}>
       
-      <h1 className={`fade-in`} style={styleh} >
+      <h1 id='name' className={`fade-in`} style={{ ...styleh, fontSize: screenWidth <= 835 ? '2.5rem' : '3.5rem'}} >
         <mark style={{ backgroundColor: color, transition: '1s',}}>{t('Hello.1')}</mark>, {t("i'm.1")}
       </h1>
-      <h1 className={`fade-in`} id='name' style={styleh}>Marcin Wiśniewski</h1>
+      <h1 className={`fade-in`} id='name' style={ {...styleh, fontSize: screenWidth <= 835 ? '2.5rem' : '3.5rem'}}>Marcin Wiśniewski</h1>
       <p className={`fade-in-p`} style={stylep}>{t('A freelance front-end developer.1')}</p>
-      <Link activeClass="active" to="services" spy={true} smooth={true} offset={-110} duration={1000}>
+      
         {/* <IconButton className={`fade-in-icon`} sx={{'&:hover': { transform: 'translate(0px, 15px)', transition: '.5s ease-in-out' } }}>
           <ArrowDownwardIcon />
         </IconButton> */}
+        <Box id="button" sx={{display: 'flex', justifyContent:'center', flexDirection: 'column', gap: '30px'}}>
+
         <Box sx={{display:'flex', gap:'10px', }}>
-          <Box sx={{width:'100px', display:'flex', justifyContent:'center', alignItems:'center', zIndex:'1',
-            height:'35px',background: '#f0804f', borderRadius: '77% 24% 70% 30% / 58% 41% 57% 43%    ', '&:hover': {
-              
-            }}}>
-            <Typography>HTML</Typography>
-          </Box>
-          <Box sx={{width:'100px', display:'flex', justifyContent:'center', alignItems:'center', zIndex:'1',
-             height:'35px', borderRadius: '31% 73% 12% 88% / 38% 73% 32% 61%    ', background:'#5788fa', cursor:'pointer'}}>
-            <Typography>CSS</Typography>
-          </Box>
-          <Box sx={{width:'100px', borderRadius: '99% 8% 12% 59% / 34% 11% 83% 46%   ', background:'#f0db4f',display:'flex', justifyContent:'center', alignItems:'center', zIndex:'1',
+        <Tooltip
+          placement="bottom"
+          overlay={<span>HTML 5</span>}>
+            <Box sx={{width:'50px', display:'flex', justifyContent:'center', alignItems:'center', zIndex:'1',
+            height:'35px',}}>
+            <img src={html} alt="" style={{width: '45px'}}/>
+          </Box></Tooltip>
+          <Tooltip
+          placement="bottom"
+          overlay={<span>CSS 3</span>}>
+            <Box sx={{width:'50px', display:'flex', justifyContent:'center', alignItems:'center', zIndex:'1',
+             height:'35px', }}>
+            <img src={csslogo} alt="" style={{width: '45px'}}/>
+          </Box></Tooltip>
+          <Tooltip
+          placement="bottom"
+          overlay={<span>JavaScript</span>}>
+            <Box sx={{width:'50px',display:'flex', justifyContent:'center', alignItems:'center', zIndex:'1',
              height:'35px'}}>
-            <Typography>JavaScript</Typography>
-          </Box>
-          <Box sx={{width:'100px', background:'#61dbfb', borderRadius:'43% 50% 12% 89% / 38% 90% 6% 83%  ', display:'flex', justifyContent:'center', alignItems:'center', zIndex:'1',
+            <img src={jslogo} alt="" style={{width: '40px'}}/>
+          </Box></Tooltip>
+          <Tooltip
+          placement="bottom"
+          overlay={<span>React</span>}>
+            <Box sx={{width:'50px', display:'flex', justifyContent:'center', alignItems:'center', zIndex:'1',
              height:'35px'}}>
-            <Typography>React</Typography>
-          </Box>
+            <img title="react" src={reactlogo} alt="" style={{width: '40px'}}/>
+          </Box></Tooltip>
+          <Tooltip
+          placement="bottom"
+          overlay={<span>Material UI</span>}>
+            <Box sx={{width:'50px', display:'flex', justifyContent:'center', alignItems:'center', zIndex:'1',
+             height:'35px'}}>
+            <img src={mui} alt="" style={{width: '40px'}}/>
+          </Box></Tooltip>
+
         </Box>
-        <br/>
+        <Link activeClass="active" to="services" spy={true} smooth={true} offset={-110} duration={1000}>
         <Button variant="outlined" sx={{
           color: 'inherit', 
           bgcolor:'#EB7777',
           transition:'.3s',
           fontWeight:'600',
-          width:'430px',
+          width:'12vw',
+          minWidth:'180px',
           '&:hover': {
              
             outline:'1px solid #EB7777',
             }}} >{t("check")}</Button>
       </Link>
+        </Box>
+        <br/>
+
     </Box>
     </Box>
     
