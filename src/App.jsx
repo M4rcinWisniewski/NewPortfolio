@@ -6,7 +6,7 @@ import Nav from './components/Nav';
 import Home from './Routes/Home'
 import AboutMe from './Routes/Aboutme';
 import { Route, Switch } from 'wouter';
-import Contact from './Routes/Contact';
+// import Contact from './Routes/Contact';
 import Footer from './components/Footer';
 import PageNotFound from './components/PageNotFound';
 
