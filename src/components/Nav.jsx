@@ -97,7 +97,7 @@ export default function Nav({ theme, handleTheme }) {
       >
         <Link href='/'><li id='li1'>{t('MAIN PAGE.1')}</li></Link>
         <Link href='/about'><li>{t('ABOUT ME.1')}</li></Link>
-        <Link href='/contact'><li>{t('CONTACT.1')}</li></Link>
+        {/* <Link href='/contact'><li>{t('CONTACT.1')}</li></Link> */}
       </ul> 
       }
       {isOpen ? <ul
@@ -120,9 +120,9 @@ export default function Nav({ theme, handleTheme }) {
             zIndex: '999', // Adjust the z-index as needed
           }}
         >
-        <Link href='/'><li id='li1'>{t('MAIN PAGE.1')}</li></Link>
-        <Link href='/about'><li>{t('ABOUT ME.1')}</li></Link>
-        <Link href='/contact'><li>{t('CONTACT.1')}</li></Link>
+        <Link href='/'><li id='li1' style={{fontWeight: '600'}}>{t('MAIN PAGE.1')}</li></Link>
+        <Link href='/about'><li style={{fontWeight: '600'}}>{t('ABOUT ME.1')}</li></Link>
+        {/* <Link href='/contact'><li>{t('CONTACT.1')}</li></Link> */}
       </ul> : null}
       
         <Box

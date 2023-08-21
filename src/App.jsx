@@ -23,7 +23,7 @@ function App() {
   }
   const HomePage = () => <div><Home theme={theme} /></div>
   const AboutMePage = () => <div><AboutMe theme={theme} /></div>
-  const ContactPage = () => <div><Contact theme={theme} /></div>
+  // const ContactPage = () => <div><Contact theme={theme} /></div>
 
   
   return (
@@ -34,7 +34,7 @@ function App() {
         <Switch>
           <Route path='/' component={HomePage}/>
           <Route path='/about' component={AboutMePage}/>
-          <Route path='/contact' component={ContactPage}/>
+          {/* <Route path='/contact' component={ContactPage}/> */}
           <Route path='/404' component={NotFound} />
           <Route component={NotFound} />
         </Switch>

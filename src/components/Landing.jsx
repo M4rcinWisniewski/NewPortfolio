@@ -95,14 +95,14 @@ useEffect(() => {
         <Box sx={{display:'flex', gap:'10px', }}>
         <Tooltip
           placement="bottom"
-          overlay={<span>HTML 5</span>}>
+          overlay={<span>HTML</span>}>
             <Box sx={{width:'50px', display:'flex', justifyContent:'center', alignItems:'center', zIndex:'1',
             height:'35px',}}>
             <img src={html} alt="" style={{width: '45px'}}/>
           </Box></Tooltip>
           <Tooltip
           placement="bottom"
-          overlay={<span>CSS 3</span>}>
+          overlay={<span>CSS</span>}>
             <Box sx={{width:'50px', display:'flex', justifyContent:'center', alignItems:'center', zIndex:'1',
              height:'35px', }}>
             <img src={csslogo} alt="" style={{width: '45px'}}/>
@@ -130,7 +130,7 @@ useEffect(() => {
           </Box></Tooltip>
 
         </Box>
-        <Link activeClass="active" to="services" spy={true} smooth={true} offset={-110} duration={1000}>
+        <Link activeClass="active" to="projects" spy={true} smooth={true} offset={-320} duration={1000}>
         <Button variant="outlined" sx={{
           color: 'inherit', 
           bgcolor:theme ? '#EB7777' : '#DA5656',

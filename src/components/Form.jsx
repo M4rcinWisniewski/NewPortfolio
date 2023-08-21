@@ -1,4 +1,4 @@
-import { Box, TextField, Button, Typography } from "@mui/material";
+import { Box, TextField, Button, Typography, Alert } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import emailjs from 'emailjs-com';
 import { getRandomColor } from "./Landing";
@@ -23,15 +23,15 @@ const Form = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        const serviceId = '';
-        const templateId = '';
-        const userId = '';
+        const serviceId = 'service_ax6rjre';
+        const templateId = 'template_wb2k7cm';
+        const userId = 'ajYgf-wmRFz9yN0Z0';
 
         emailjs.sendForm(serviceId, templateId, e.target, userId)
-            .then((result) => {
-                alert('Email sent successfully:', result.text);
+            .then(() => {
+                return <Alert severity="error">Email has been send successfully!</Alert>
             }, (error) => {
-                alert('Failed to send email:', error.text);
+                alert(<Alert severity="error">Email has not been send - try again later, {error}</Alert>)
             });
     };
     const {t} = useTranslation();

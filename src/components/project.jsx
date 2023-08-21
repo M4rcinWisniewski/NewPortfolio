@@ -1,100 +1,78 @@
-import { Box, Modal, Backdrop, } from "@mui/material";
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
-import { useState, useEffect } from "react";
-import { useTranslation } from 'react-i18next';
-import '../App.css'
+import { Box, Typography } from "@mui/material";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
-const getRandomColor = () => {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        if (i === 0) {
-          color += '89ABCDEF'[Math.floor(Math.random() * 8)]; // Higher red component
-        } else {
-          color += letters[Math.floor(Math.random() * 16)];
-        }
-      }
-    return color;
-  };
-
-const Project = props => {
-    const [color, setColor] = useState(getRandomColor());
-    const [image, setImage] = useState(false)
-    const toggleImage = () => {
-        setImage(prevImage => !prevImage)
-    }
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-          const newColor = getRandomColor();
-          setColor(newColor);
-        }, 3000);
-          return () => clearInterval(intervalId);
-        }, []);
-        const {t} = useTranslation()
+const Project = (props, theme) => {
+    const [isHover, setIsHover] = useState(false);
+    const {t} = useTranslation();
     return (
-        <>
-            <section
-                id='section'
-                style={{
-                    width: '100%',
-                    // marginRight: '15px',
-                    padding: '15vw', // Reset padding
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'flex-start',
-                    paddingBottom: '30vh',
-                }}
-            >
-                <Box sx={{ display: 'flex' , flexDirection:'row', justifyContent:'center', alignItems:'center', gap:' 15vh'}} id='projects'>
-                    <Box sx={{ textAlign: 'left' }} id='Box2'>
-                        <h3 style={{ fontSize: '2.5rem' }}>{props.key} {props.title}</h3>
-                        <a id='socials' href='https://github.com/M4rcinWisniewski/chess/tree/main' style={{ 
-                            display: 'flex', 
-                            alignItems: 'center', 
-                            textDecoration: 'none', 
-                            color: 'inherit', 
-                            textAlign:'center',
-                            justifyContent: 'center' }}>
-                            {t("link.1")}
-                            <ArrowOutwardIcon />
-                        </a>
-                    </Box>
-                    <img
-                        id="socials"
-                        className="img"
-                        src={props.img}
-                        alt=''
-                        onClick={toggleImage} // Open the image when clicked
-                        style={{ width: '55%', cursor: 'pointer', filter:`drop-shadow(5px 5px 4px ${color})`, transition:'1s'}}
-                    />
+        <Box
+        id="projects"
+            sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                margin: '10vh',
+                transition: '1s ease' // Add transition here
+            }}
+        >
+            
+            {isHover ? (
+                <img
+                
+                onMouseEnter={() => setIsHover(true)}
+                onMouseLeave={() => setIsHover(false)}
+                    style={{ width: '35vw',
+                    height: '35vh',
+                    minHeight: '300px',
+                    minWidth: '300px',
+                    transition: '1s',
+                    outline:'dashed 4px #EB7777',
+                    outlineOffset: '.5vw', 
+                objectFit:'contain',
+            cursor:'pointer'}}
+                    src={props.img}
+                    alt=""
+                />
+            ) : (
+                <Box
+                onMouseEnter={() => setIsHover(true)}
+                onMouseLeave={() => setIsHover(false)}
+                    sx={{
+                        flexDirection: 'column',
+                        width: '35vw',
+                        minWidth: '300px',
+                        height: '35vh',
+                        background: 'rgba(218,86,86,.5)',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        transition: '1s',
+                        
+                    }}
+                >
+                    <Typography
+                        sx={{
+                            color: 'white',
+                            fontSize: '2rem',
+                            fontWeight: '600',
+                            textAlign:'center'
+                        }}
+                    >
+                        {props.title}
+                    </Typography>
+                    <Typography
+                        sx={{
+                            color: '#363535',
+                            fontSize: '1rem',
+                            fontWeight: '500'
+                        }}
+                    >
+                        {t("Hover")}
+                    </Typography>
                 </Box>
-            </section>
-
-            {/* Modal to display enlarged image */}
-            <Modal
-                open={image}
-                onClose={toggleImage}
-                closeAfterTransition
-                BackdropComponent={Backdrop}
-                BackdropProps={{
-                    timeout: 500,
-                }}
-                // Disable transitions for the modal content
-                TransitionProps={{
-                    disableTransition: true,
-                }}
-            >
-                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', zIndex:'10000000000000'}}>
-                    <img
-                        src={props.img}
-                        alt=''
-                        style={{ maxWidth: '80%', maxHeight: '80vh', cursor: 'pointer', margin: '20px' }}
-                        onClick={toggleImage} // Close the image when clicked
-                    />
-                </div>
-            </Modal>
-        </>
+            )}
+        </Box>
     );
 };
 

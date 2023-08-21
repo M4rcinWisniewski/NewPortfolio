@@ -71,7 +71,7 @@
     "Go back to homepage": {
         "1": "Wróć do strony głównej"
     },
-    "check": "Zatrudnij mnie!",
+    "check": "Sprawdź!",
     "Services": "Usługi",
     "Bussines website": "Strona biznesowa",
     "pages": {
@@ -87,6 +87,10 @@
     "$70": "328,34zł",
     "order": "ZAMÓW!",
     "custom": "Jeżeli masz inne wymagania co do zamówienia, po prostu do mnie napisz!",
-    "DM": "Napisz do mnie po szczegułowe informacje"
+    "DM": "Napisz do mnie po szczegułowe informacje",
+    "Projects": {
+        "1": "Projekty"
+    },
+    "Hover": "(Pss, najedź na mnie!)"
 
 } 
