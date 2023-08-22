@@ -91,7 +91,7 @@ const Form = () => {
                           }
                           sx={{ mb: 2 }}
                         >
-                          Close me!
+                          Email has been set Successfuly
                         </Alert>
                       </Collapse>
                     ) : sent === false ? (
