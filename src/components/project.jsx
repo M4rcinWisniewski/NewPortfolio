@@ -20,7 +20,7 @@ const Project = (props, theme) => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                margin: '10vh',
+                // margin: '10vh',
                 transition: '1s ease',
                 width: 'auto',
                 flexWrap: 'wrap'

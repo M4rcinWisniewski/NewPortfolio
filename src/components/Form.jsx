@@ -17,6 +17,7 @@ const width = {
 const Form = () => {
     const [color, setColor] = useState(getRandomColor());
     const [recaptchaValue, setRecaptchaValue] = useState(null);
+    const [sent, setSent] = useState(null)
 
     const handleRecaptchaChange = (value) => {
         setRecaptchaValue(value);
@@ -41,9 +42,9 @@ const Form = () => {
 
         emailjs.sendForm(serviceId, templateId, e.target, userId)
             .then(() => {
-                return <Alert severity="error">Email has been send successfully!</Alert>
-            }, (error) => {
-                alert(<Alert severity="error">Email has not been send - try again later, {error}</Alert>)
+               setSent(true)
+            }, () => {
+                setSent(false)
             });
     };
     const {t} = useTranslation();
@@ -53,6 +54,7 @@ const Form = () => {
                     {/* <svg style={{transform: 'scale(.8)', position:'absolute', top:'5%', left:'15%', zIndex: '0', overflow:'hidden', opacity: '30%'}}xmlns="http://www.w3.org/2000/svg" width="90%" height="100%">
           <image   xlinkHref="/blob.svg" width="125%" height="100%" />
         </svg> */}
+            
             <Typography className='fade-in' variant='h1' style={{ margin: '10vh', fontSize: '2rem', fontWeight: '600', marginBottom: '2vh', textAlign: 'center'}}>{t("Send me a .1")}<mark style={{backgroundColor: color, transition: '1s'}}>{t("message!.1")}</mark></Typography>
             <Typography className='fade-in-p' sx={{marginBottom: '10vh', color: 'gray', textAlign: 'center'}} variant="h6">{t("If you want to ask a question or hire me fill the form below!.1")}</Typography>
             <form className='fade-in-p' style={{display: 'flex', justifyContent: 'center', alignItems: 'center',gap: '5vh', flexDirection: 'column',}}onSubmit={sendEmail}>
@@ -66,9 +68,15 @@ const Form = () => {
                     sitekey="6LdmgsYnAAAAAM1iCVauGdm85Hg3XgDuphpABjNq"
                     onChange={handleRecaptchaChange}
                 />
+                {}
                     <Button type="submit" variant="" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '.5vw' }}>
                         {t("Send.1")} <SendIcon sx={{ fontSize: '1.1rem', marginBottom: '2px' }} />
                     </Button>
+                    {sent === true ? (
+                        <Alert severity="success">Email has been sent successfully!</Alert>
+                    ) : sent === false ? (
+                        <Alert severity="error">Email has not been sent</Alert>
+                    ) : null}
                 </Box>
             </form>
         </Box>
