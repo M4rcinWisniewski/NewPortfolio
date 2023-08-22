@@ -1,4 +1,5 @@
-import { Box, TextField, Button, Typography, Alert } from "@mui/material";
+import { Box, TextField, Button, Typography, Alert, Collapse, IconButton } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
 import SendIcon from '@mui/icons-material/Send';
 import emailjs from 'emailjs-com';
 import { getRandomColor } from "./Landing";
@@ -18,6 +19,7 @@ const Form = () => {
     const [color, setColor] = useState(getRandomColor());
     const [recaptchaValue, setRecaptchaValue] = useState(null);
     const [sent, setSent] = useState(null)
+    const [open, setOpen] = useState(true);
 
     const handleRecaptchaChange = (value) => {
         setRecaptchaValue(value);
@@ -63,17 +65,35 @@ const Form = () => {
                     <TextField name="email" variant="outlined" label={t("Your email.1")} sx={width} color="info" />
                 </Box>
                 <TextField name="message" variant="outlined" label={t("Your message.1")} sx={{ width: '35vw', minWidth: '370px' }} color="info" multiline />
-                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection:'column'}}>
                 <ReCAPTCHA
                     sitekey="6LdmgsYnAAAAAM1iCVauGdm85Hg3XgDuphpABjNq"
                     onChange={handleRecaptchaChange}
                 />
-                {}
+                
                     <Button type="submit" variant="" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '.5vw' }}>
                         {t("Send.1")} <SendIcon sx={{ fontSize: '1.1rem', marginBottom: '2px' }} />
                     </Button>
                     {sent === true ? (
-                        <Alert severity="success">Email has been sent successfully!</Alert>
+                        <Collapse in={open}>
+                        <Alert
+                          action={
+                            <IconButton
+                              aria-label="close"
+                              color="inherit"
+                              size="small"
+                              onClick={() => {
+                                setOpen(false);
+                              }}
+                            >
+                              <CloseIcon fontSize="inherit" />
+                            </IconButton>
+                          }
+                          sx={{ mb: 2 }}
+                        >
+                          Close me!
+                        </Alert>
+                      </Collapse>
                     ) : sent === false ? (
                         <Alert severity="error">Email has not been sent</Alert>
                     ) : null}
