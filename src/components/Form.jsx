@@ -15,7 +15,7 @@ const width = {
 }
 
 
-const Form = () => {
+const Form = ({theme}) => {
     const [color, setColor] = useState(getRandomColor());
     const [recaptchaValue, setRecaptchaValue] = useState(null);
     const [sent, setSent] = useState(null)
@@ -69,6 +69,8 @@ const Form = () => {
                 <ReCAPTCHA
                     sitekey="6LdmgsYnAAAAAM1iCVauGdm85Hg3XgDuphpABjNq"
                     onChange={handleRecaptchaChange}
+                    size="normal"
+                    theme={theme ? 'light' : 'dark'}
                 />
                 
                     <Button type="submit" variant="" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '.5vw' }}>
@@ -81,7 +83,7 @@ const Form = () => {
                             <IconButton
                               aria-label="close"
                               color="inherit"
-                              size="small"
+
                               onClick={() => {
                                 setOpen(false);
                               }}
@@ -102,6 +104,5 @@ const Form = () => {
         </Box>
     )
 }
-
 export default Form;
 

@@ -26,7 +26,8 @@ const Project = (props, theme) => {
                 flexWrap: 'wrap'
             }}
         >
-            <Card sx={{ maxWidth: 345, width:'300px', height:'149px' }}             onMouseEnter={handleMouseEnter}
+            <Card sx={{ maxWidth: 345, width:'300px', height:'149px', }}             
+            onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}>
 
                     {isHover ? (
