@@ -4,6 +4,8 @@ import emailjs from 'emailjs-com';
 import { getRandomColor } from "./Landing";
 import { useState, useEffect } from "react";
 import '../App.css'
+import ReCAPTCHA from "react-google-recaptcha";
+
 import { useTranslation } from "react-i18next";
 
 const width = {
@@ -11,8 +13,14 @@ const width = {
     minWidth: '170px'
 }
 
+
 const Form = () => {
     const [color, setColor] = useState(getRandomColor());
+    const [recaptchaValue, setRecaptchaValue] = useState(null);
+
+    const handleRecaptchaChange = (value) => {
+        setRecaptchaValue(value);
+    };
     useEffect(() => {
         const intervalId = setInterval(() => {
           const newColor = getRandomColor();
@@ -22,6 +30,10 @@ const Form = () => {
       }, []);
     const sendEmail = (e) => {
         e.preventDefault();
+        if (!recaptchaValue) {
+            // Display an error message or take appropriate action
+            return;
+        }
 
         const serviceId = 'service_ax6rjre';
         const templateId = 'template_wb2k7cm';
@@ -50,6 +62,10 @@ const Form = () => {
                 </Box>
                 <TextField name="message" variant="outlined" label={t("Your message.1")} sx={{ width: '35vw', minWidth: '370px' }} color="info" multiline />
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <ReCAPTCHA
+                    sitekey="6LdmgsYnAAAAAM1iCVauGdm85Hg3XgDuphpABjNq"
+                    onChange={handleRecaptchaChange}
+                />
                     <Button type="submit" variant="" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '.5vw' }}>
                         {t("Send.1")} <SendIcon sx={{ fontSize: '1.1rem', marginBottom: '2px' }} />
                     </Button>

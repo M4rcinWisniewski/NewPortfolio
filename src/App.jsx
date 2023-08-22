@@ -6,7 +6,7 @@ import Nav from './components/Nav';
 import Home from './Routes/Home'
 import AboutMe from './Routes/Aboutme';
 import { Route, Switch } from 'wouter';
-// import Contact from './Routes/Contact';
+import Contact from './Routes/Contact';
 import Footer from './components/Footer';
 import PageNotFound from './components/PageNotFound';
 
@@ -18,12 +18,15 @@ const NotFound = () => <div><PageNotFound /></div>;
 function App() {
   const [theme, setTheme] = useState(true);
   
+  
+      // const [color, setColor] = useState(getRandomColor());
+
   const handleTheme = () => {
     setTheme(!theme);
   }
   const HomePage = () => <div><Home theme={theme} /></div>
   const AboutMePage = () => <div><AboutMe theme={theme} /></div>
-  // const ContactPage = () => <div><Contact theme={theme} /></div>
+  const ContactPage = () => <div><Contact theme={theme} /></div>
 
   
   return (
@@ -34,7 +37,7 @@ function App() {
         <Switch>
           <Route path='/' component={HomePage}/>
           <Route path='/about' component={AboutMePage}/>
-          {/* <Route path='/contact' component={ContactPage}/> */}
+          <Route path='/contact' component={ContactPage}/>
           <Route path='/404' component={NotFound} />
           <Route component={NotFound} />
         </Switch>

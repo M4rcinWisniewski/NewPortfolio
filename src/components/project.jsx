@@ -1,77 +1,69 @@
-import { Box, Typography } from "@mui/material";
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
+import { Box, Card, CardMedia, CardContent, Typography } from "@mui/material";
+import React, { useState } from "react";
 
 const Project = (props, theme) => {
     const [isHover, setIsHover] = useState(false);
-    const {t} = useTranslation();
+
+    const handleMouseEnter = () => {
+        setIsHover(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHover(false);
+    };
+
     return (
         <Box
-        id="projects"
+            id="projects"
+
             sx={{
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
                 margin: '10vh',
-                transition: '1s ease' // Add transition here
+                transition: '1s ease',
+                width: 'auto',
+                flexWrap: 'wrap'
             }}
         >
-            
-            {isHover ? (
-                <img
-                
-                onMouseEnter={() => setIsHover(true)}
-                onMouseLeave={() => setIsHover(false)}
-                    style={{ width: '35vw',
-                    height: '35vh',
-                    minHeight: '300px',
-                    minWidth: '300px',
-                    transition: '1s',
-                    outline:'dashed 4px #EB7777',
-                    outlineOffset: '.5vw', 
-                objectFit:'contain',
-            cursor:'pointer'}}
-                    src={props.img}
-                    alt=""
-                />
-            ) : (
-                <Box
-                onMouseEnter={() => setIsHover(true)}
-                onMouseLeave={() => setIsHover(false)}
-                    sx={{
-                        flexDirection: 'column',
-                        width: '35vw',
-                        minWidth: '300px',
-                        height: '35vh',
-                        background: 'rgba(218,86,86,.5)',
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        transition: '1s',
-                        
-                    }}
-                >
-                    <Typography
-                        sx={{
-                            color: 'white',
-                            fontSize: '2rem',
-                            fontWeight: '600',
-                            textAlign:'center'
-                        }}
-                    >
-                        {props.title}
-                    </Typography>
-                    <Typography
-                        sx={{
-                            color: '#363535',
-                            fontSize: '1rem',
-                            fontWeight: '500'
-                        }}
-                    >
-                        {t("Hover")}
-                    </Typography>
-                </Box>
-            )}
+            <Card sx={{ maxWidth: 345, width:'300px', height:'149px' }}             onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}>
+
+                    {isHover ? (
+                        <CardContent
+                            style={{
+                                opacity: isHover ? 1 : 0,
+                                transition: 'opacity 0.3s ease',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                display: 'flex', // Display the content container
+                                flexDirection: 'column', // Align content vertically
+                                height:'100%'
+                            }}
+                        >
+                            <Typography gutterBottom variant="h5" component="div">
+                                {props.title}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                {props.DescriptionEn}
+                            </Typography>
+                        </CardContent>
+                    ) : (
+                        <CardMedia
+
+                            component="img"
+                            image={props.img}
+                            aria-label="Siema"
+                            alt="green iguana"
+                            style={{
+                                opacity: isHover ? 0 : 1,
+                                transition: 'opacity 0.3s ease',
+                                objectFit:'cover'
+                            }}
+                        />
+                    )}
+         
+            </Card>
         </Box>
     );
 };

@@ -12,7 +12,7 @@ const data = [
   {
     key: '2',
     title: 'Currency converter',
-    img: image1
+    img: image1,
   },
 ];
 
