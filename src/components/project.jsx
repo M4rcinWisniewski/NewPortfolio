@@ -26,7 +26,7 @@ const Project = (props, theme) => {
                 flexWrap: 'wrap'
             }}
         >
-            <Card sx={{ maxWidth: 345, width:'300px', height:'149px', }}             
+            <a href={props.link} style={{textDecoration:'none', color:'inherit', textAlign:'center'}}><Card sx={{ maxWidth: 345, width:'300px', height:'149px', }}             
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}>
 
@@ -64,7 +64,7 @@ const Project = (props, theme) => {
                         />
                     )}
          
-            </Card>
+            </Card></a>
         </Box>
     );
 };
