@@ -17,8 +17,11 @@ export const themeLight = createTheme({
       mode: 'light',
       primary: {
         main: '#FFFFFF'
-      }
-    }
+      }}
+  //   }, body: {
+  //     height: '100vh',
+  //     background: `linear-gradient(to right, ${theme.palette.common.black} 50%, ${theme.palette.common.white} 50%)`,
+  // },
   });
   
   export const themeDark = createTheme({

@@ -66,12 +66,17 @@ const Form = ({theme}) => {
                 </Box>
                 <TextField name="message" variant="outlined" label={t("Your message.1")} sx={{ width: '35vw', minWidth: '370px' }} color="info" multiline />
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection:'column'}}>
-                <ReCAPTCHA
+                {theme ? <ReCAPTCHA
                     sitekey="6LdmgsYnAAAAAM1iCVauGdm85Hg3XgDuphpABjNq"
                     onChange={handleRecaptchaChange}
                     size="normal"
-                    theme={theme ? 'light' : 'dark'}
-                />
+                    theme= 'light'
+                />: <ReCAPTCHA
+                sitekey="6LdmgsYnAAAAAM1iCVauGdm85Hg3XgDuphpABjNq"
+                onChange={handleRecaptchaChange}
+                size="normal"
+                theme= 'dark'
+            />}
                 
                     <Button type="submit" variant="" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '.5vw' }}>
                         {t("Send.1")} <SendIcon sx={{ fontSize: '1.1rem', marginBottom: '2px' }} />

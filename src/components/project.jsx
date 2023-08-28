@@ -20,13 +20,20 @@ const Project = (props, theme) => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                // margin: '10vh',
                 transition: '1s ease',
                 width: 'auto',
                 flexWrap: 'wrap'
             }}
         >
-            <a href={props.link} style={{textDecoration:'none', color:'inherit', textAlign:'center'}}><Card sx={{ maxWidth: 345, width:'300px', height:'149px', }}             
+            <a href={props.link} style={{textDecoration:'none', color:'inherit', textAlign:'center'}}><Card sx={{ 
+                maxWidth: 690, 
+                width:'350px', 
+                height:'170px', 
+                '&:hover':{
+                    boxShadow: '0px 10px 24px 0px rgba(66, 68, 90, .8)'
+                } ,
+                borderRadius: '10px'
+            }}             
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}>
 
@@ -59,7 +66,8 @@ const Project = (props, theme) => {
                             style={{
                                 opacity: isHover ? 0 : 1,
                                 transition: 'opacity 0.3s ease',
-                                objectFit:'cover'
+                                objectFit:'cover',
+                                borderRadius: '10px'
                             }}
                         />
                     )}

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import { themeLight, themeDark } from './components/Nav';
-import { Paper, ThemeProvider, CssBaseline } from "@mui/material"; // Import CssBaseline
+import { Paper, ThemeProvider, CssBaseline} from "@mui/material"; // Import CssBaseline
 import Nav from './components/Nav';
 import Home from './Routes/Home'
 import AboutMe from './Routes/Aboutme';
@@ -24,6 +24,7 @@ function App() {
   const handleTheme = () => {
     setTheme(!theme);
   }
+
   const HomePage = () => <div><Home theme={theme} /></div>
   const AboutMePage = () => <div><AboutMe theme={theme} /></div>
   const ContactPage = () => <div><Contact theme={theme} /></div>

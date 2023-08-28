@@ -26,7 +26,7 @@ const Home = ({ theme, isValue}) => {
         <Landing theme={theme}/>
         <Box sx={{display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column', marginBottom:'20vh'}}>
         <Typography sx={{fontSize:'2.5rem', fontWeight:'600'}}>{t('Projects.1')}</Typography>
-        <Box sx={{display: 'flex', justifyContent:'center', alignItems:'center', flexWrap:'wrap', gap: '15vw', marginTop:'10vh'}}>
+        <Box sx={{display: 'flex', justifyContent:'center', alignItems:'center', flexWrap:'wrap', gap: '10vw', marginTop:'10vh'}}>
           
           {projects }
         </Box>
