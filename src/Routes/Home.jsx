@@ -39,13 +39,13 @@ const Home = ({ theme, isValue}) => {
         <Landing theme={theme}/>
         <Box sx={{display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column', marginBottom:'20vh'}}>
         <Typography sx={{fontSize:'2.5rem', fontWeight:'600'}}>{t('Projects.1')}</Typography>
-        {window.innerWidth <= 977 && 
+        {window.innerWidth <= 977 ? 
           <Box ref={emblaRef} sx={{display: 'flex', justifyContent:'center', alignItems:'center', flexWrap:'wrap', gap: '10vw', marginTop:'10vh'}}>
             <Stack direction="row"  FlexWrap="wrap"  style={{ width: '60vw', margin: 0, display: 'flex', justifyContent: 'left',  flex: '0 0 50%', gap:'5vw'}}>
               {projects }
             </Stack>
-          </Box>}
-          {window.innerWidth > 977 &&
+          </Box>
+          :
             <Box sx={{display: 'flex', justifyContent:'center', alignItems:'center', flexWrap:'wrap', gap: '10vw', marginTop:'10vh'}}>
               
                 {projects }
