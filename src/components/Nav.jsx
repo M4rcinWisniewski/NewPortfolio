@@ -117,7 +117,7 @@ export default function Nav({ theme, handleTheme}) {
             listStyle: 'none',
             width: '110Vw',
             backgroundColor: 'inherit',
-            opacity:'80%',
+
             padding: '5vh 0', // Adjust vertical padding
             zIndex: '999', // Adjust the z-index as needed
           }}
