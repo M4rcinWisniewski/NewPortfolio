@@ -1,4 +1,4 @@
-import { Box, Typography,} from "@mui/material"
+import { Box, Typography, } from "@mui/material"
 import  image  from '../images/Microsites-bro.png'
 import image1 from '../images/Microsites-pana.png'
 import image2 from '../images/Microsites-rafiki.png'
@@ -85,7 +85,7 @@ const Services = ({theme}) => {
                 width:'19vw',
                 height: '61vh',
                 margin:'3vw',
-                boxShadow:'0px 12px 12px rgba(0, 0, 0, 0.2)'
+                boxShadow:'0px 12px 12px rgba(0, 0, 0, 0.3)'
             }}}>
 
                 <div style={{display:'flex', 
