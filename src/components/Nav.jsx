@@ -140,8 +140,9 @@ export default function Nav({ theme, handleTheme}) {
       value={isValue}
       onChange={handleChange}
       label='en'
-      variant='standard'
-      sx={{padding: '0 10px 0 10px'}}
+      variant='outlined'
+      sx={{padding: '0 10px 0 10px',
+    height: '40px',width:'7.7.5vw'}}
       
     >
 

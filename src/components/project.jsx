@@ -1,11 +1,11 @@
 import { Box, Card, CardMedia, CardContent, Typography } from "@mui/material";
 import React, { useState } from "react";
-import useEmblaCarousel from 'embla-carousel-react'
+// import data from '../data/projects'
 // import Autoplay from 'embla-carousel-autoplay'
 
 const Project = (props, theme) => {
     const [isHover, setIsHover] = useState(false);
-    const [emblaRef] = useEmblaCarousel({ loop: false }, )
+
 
     const handleMouseEnter = () => {
         setIsHover(true);
@@ -18,14 +18,15 @@ const Project = (props, theme) => {
     return (
         <Box
             id="projects"
-            ref={emblaRef}
+
             sx={{
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
                 transition: '1s ease',
                 width: 'auto',
-                flexWrap: 'wrap'
+                flexWrap: 'wrap',
+                margin:'1vw'
             }}
         >
             <a href={props.link} style={{textDecoration:'none', color:'inherit', textAlign:'center'}}><Card sx={{ 
@@ -49,7 +50,8 @@ const Project = (props, theme) => {
                                 alignItems: 'center',
                                 display: 'flex', // Display the content container
                                 flexDirection: 'column', // Align content vertically
-                                height:'100%'
+                                height:'100%',
+                                
                             }}
                         >
                             <Typography gutterBottom variant="h5" component="div">

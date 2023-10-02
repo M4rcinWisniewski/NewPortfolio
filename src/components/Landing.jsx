@@ -68,7 +68,7 @@ useEffect(() => {
       </svg>
     <div style={{background: 'transparent'}}>
       <img className={`fade-in`} id='img-title'style={{width: '25vw', minWidth: '190px', marginBottom: 0, zIndex:'0'}} src={theme ? gif : gifDark} alt=""/> </div>
-    <Box id="title" sx={{
+    <Box id="title" sx={{ 
       display: 'flex',
       justifyContent:' center',
       alignItems: 'left',
