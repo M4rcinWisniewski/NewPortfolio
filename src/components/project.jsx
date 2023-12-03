@@ -31,8 +31,9 @@ const Project = (props, theme) => {
         >
             <a href={props.link} style={{textDecoration:'none', color:'inherit', textAlign:'center'}}><Card sx={{ 
                 maxWidth: 690, 
-                width:'440px', 
-                height:'213px', 
+                width:'25vw', 
+                minHeight:'190px', 
+                height:'auto',
                 '&:hover':{
                     boxShadow: '0px 10px 24px 0px rgba(66, 68, 90, .8)'
                 } ,
@@ -66,7 +67,7 @@ const Project = (props, theme) => {
 
                             component="img"
                             image={props.img}
-                            aria-label="Siema"
+                            // aria-label="Siema"
                             alt="green iguana"
                             style={{
                                 opacity: isHover ? 0 : 1,

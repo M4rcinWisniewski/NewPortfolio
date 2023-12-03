@@ -1,8 +1,8 @@
 import { Box, Button } from "@mui/material";
 import  reactlogo  from '../images/reactlogo.png';
-import  jslogo  from '../images/Jslogo.png'
+import  tslogo  from '../images/typescript.png'
 import csslogo from '../images/csslogo.png'
-import html from '../images/html.png'
+import html from '../images/htmllogo.png'
 import mui from '../images/MUI.png'
 import React, { useEffect,  useState } from 'react';
 import { Link } from 'react-scroll';
@@ -98,28 +98,28 @@ useEffect(() => {
           overlay={<span>HTML</span>}>
             <Box sx={{width:'50px', display:'flex', justifyContent:'center', alignItems:'center', zIndex:'1',
             height:'35px',}}>
-            <img src={html} alt="" style={{width: '45px'}}/>
+            <img src={html} alt="" style={{width: '35px'}}/>
           </Box></Tooltip>
           <Tooltip
           placement="bottom"
           overlay={<span>CSS</span>}>
             <Box sx={{width:'50px', display:'flex', justifyContent:'center', alignItems:'center', zIndex:'1',
              height:'35px', }}>
-            <img src={csslogo} alt="" style={{width: '45px'}}/>
+            <img src={csslogo} alt="" style={{width: '40px'}}/>
           </Box></Tooltip>
           <Tooltip
           placement="bottom"
-          overlay={<span>JavaScript</span>}>
+          overlay={<span>TypeScript</span>}>
             <Box sx={{width:'50px',display:'flex', justifyContent:'center', alignItems:'center', zIndex:'1',
              height:'35px'}}>
-            <img src={jslogo} alt="" style={{width: '35px'}}/>
+            <img src={tslogo} alt="" style={{width: '38px'}}/>
           </Box></Tooltip>
           <Tooltip
           placement="bottom"
           overlay={<span>React</span>}>
             <Box sx={{width:'50px', display:'flex', justifyContent:'center', alignItems:'center', zIndex:'1',
              height:'35px'}}>
-            <img title="react" src={reactlogo} alt="" style={{width: '40px'}}/>
+            <img title="react" src={reactlogo} alt="" style={{width: '44px'}}/>
           </Box></Tooltip>
           <Tooltip
           placement="bottom"

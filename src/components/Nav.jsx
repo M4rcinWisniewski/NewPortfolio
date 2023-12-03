@@ -28,7 +28,8 @@ export const themeLight = createTheme({
     palette: {
       mode: 'dark',
       primary: {
-        main: '#1e1e1e'
+        main: '#1e1e1e',
+        dark:'#2e2e2e'
       },
     }
   });
@@ -134,15 +135,16 @@ export default function Nav({ theme, handleTheme}) {
           alignItems: 'center',
           gap:'2vw'
         }}>
-        <div id='socials'><Select
+        <div id='socials'>
+          <Select
          labelId="demo-simple-select-label"
       
       value={isValue}
       onChange={handleChange}
       label='en'
-      variant='outlined'
-      sx={{padding: '0 10px 0 10px',
-    height: '40px',width:'7.7.5vw'}}
+      variant='standard'
+      sx={{padding: '10px',
+    height: '5vh',width:'100px'}}
       
     >
 
