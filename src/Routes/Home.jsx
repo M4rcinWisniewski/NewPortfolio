@@ -5,7 +5,6 @@ import { Typography, Box} from '@mui/material';
 import { useTranslation } from "react-i18next";
 // import { Splide} from "@splidejs/react-splide";
 import Project from '../components/project'
-import data from '../data/projects'
 import '@splidejs/react-splide/css';
   
 const Home = ({ theme, isValue}) => {
@@ -13,20 +12,6 @@ const Home = ({ theme, isValue}) => {
 
 
   const {t} = useTranslation();
-  const projects = data.map(item => {
-    return(
-      <Project 
-        isValue={isValue}
-        theme={theme} 
-        key={item.key}
-        title={item.title}
-        img={item.img}
-        link={item.link}
-        DescriptionEn={item.DescriptionEn}
-        DescriptionPl={item.DescriptionPl}
-      />
-    )
-  })
 
       return(
     <home>
@@ -37,7 +22,8 @@ const Home = ({ theme, isValue}) => {
        
                   <Box sx={{display: 'flex', justifyContent:'center', alignItems:'center', flexWrap: 'wrap', }}>
                   
-{projects}
+{/* {projects} */}
+                <Project theme={theme}/>
                 </Box>
 
 

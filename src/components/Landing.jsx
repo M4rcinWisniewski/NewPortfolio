@@ -34,8 +34,6 @@ const Landing = ({theme}) => {
   const styleh = {
     margin: '0',
     
-    // textAlign: 'left'
-    
 }
 const stylep = {
     color: '#606060',

@@ -8,9 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ClearIcon from '@mui/icons-material/Clear';
 import {Link} from 'wouter'
 import { useTranslation } from 'react-i18next';
-// import {Link as LinkS} from 'react-scroll'
-// import { Warning } from '@mui/icons-material';
-// import WorkIcon from '@mui/icons-material/WorkOutline';
+
 
 export const themeLight = createTheme({
     palette: {
@@ -18,10 +16,7 @@ export const themeLight = createTheme({
       primary: {
         main: '#FFFFFF'
       }}
-  //   }, body: {
-  //     height: '100vh',
-  //     background: `linear-gradient(to right, ${theme.palette.common.black} 50%, ${theme.palette.common.white} 50%)`,
-  // },
+
   });
   
   export const themeDark = createTheme({

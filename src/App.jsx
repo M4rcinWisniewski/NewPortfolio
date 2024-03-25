@@ -36,7 +36,7 @@ function App() {
       <Paper sx={{ width: '100%', height:'auto', borderRadius: '0' }} className="App"> {/* Remove explicit height */}
         <Nav theme={theme} handleTheme={handleTheme} />
         <Switch>
-          <Route path='/' component={HomePage}/>
+          <Route theme={theme} path='/' component={HomePage}/>
           <Route path='/about' component={AboutMePage}/>
           <Route path='/contact' component={ContactPage}/>
           <Route path='/404' component={NotFound} />
